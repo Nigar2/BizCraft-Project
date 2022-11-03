@@ -1,0 +1,134 @@
+.testimonial {
+  margin-top: 40px;
+
+  .services {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &:hover {
+      .serviceicon {
+        color: #81c83c;
+      }
+    }
+
+    .serviceicon {
+      border-right: 2px solid lightgrey;
+      color: #959595;
+      padding: 8px;
+      margin-bottom: 10px;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        color: #81c83c;
+      }
+    }
+
+    .servicetext {
+      margin-left: 15px;
+
+      h3 {
+        color: #323232;
+        font-weight: 450;
+        letter-spacing: 1px;
+        font-family: "Lato" sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        font-size: 14px;
+        color: #6a6a6a;
+      }
+    }
+  }
+
+  .testimonial-content {
+    position: relative;
+    padding: 30px 30px 15px 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e7e7e7;
+    margin-bottom: 40px;
+
+    img {
+      float: left;
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+    }
+
+    p {
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.6em;
+      padding-left: 110px;
+    }
+
+    .ts-author {
+      position: absolute;
+      bottom: -60px;
+      left: 90px;
+
+      h3 {
+        font-size: 14px;
+        margin: 10px 0 0;
+        color: #323232;
+        line-height: 32px;
+        font-weight: 400;
+        font-family: "Lato", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+
+        span {
+          display: block;
+          font-size: 13px;
+          margin-top: -10px;
+          text-transform: capitalize;
+          color: #555;
+        }
+      }
+    }
+  }
+
+  .testimonial-content::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 45px;
+    border-style: solid;
+    border-width: 40px 0px 0 30px;
+    border-color: #e7e7e7 transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+  }
+}
+
+.fixed {
+  background-color:$b-color !important;
+  color:$w-color !important;
+  padding: 40px 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  transition: 0.7s ease-in-out;
+  transform: translateY(-40px);
+
+  p {
+    a {
+      color: $w-color !important;
+    }
+  }
+  ul {
+    li {
+      a {
+        color: $w-color !important;
+      }
+    }
+  }
+}

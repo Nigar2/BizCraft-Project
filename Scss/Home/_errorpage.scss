@@ -1,0 +1,72 @@
+.errorpage {
+    margin: 60px 0px;
+    .error-code {
+        display: block;
+        font-size: 150px;
+        line-height: 150px;
+        color: #333;
+        margin-bottom: 20px;
+        text-shadow: 5px 5px 1px rgba(0, 0, 0, 0.079);
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 400;
+        font-family: "Lato", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .error-body {
+        font-size: 15px;
+        color: #6A6A6A;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        line-height: 1.6em;
+      
+            a{
+                margin-top: 30px;
+                border: 2px solid #81c83c;
+                color:#81c83c;
+                border-radius: 50px;
+                padding: 10px 30px;
+                background: none;
+                font-size: 14px;
+                text-transform: uppercase;
+                transition: all 0.3s ease 0s;
+                border-width: 2px;
+                &:hover {
+                    border: 2px solid #81c83c;
+                    background-color: #81c83c !important;
+                    color:white !important;
+                }
+            }
+        
+    }
+}
+.fixed {
+    background-color:$b-color !important;
+    color:$w-color !important;
+    padding: 40px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    transition: 0.7s ease-in-out;
+    transform: translateY(-40px);
+  
+    p {
+      a {
+        color: $w-color !important;
+      }
+    }
+    ul {
+      li {
+        a {
+          color: $w-color !important;
+        }
+      }
+    }
+  }

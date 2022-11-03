@@ -1,0 +1,27 @@
+@import "mixin";
+@import "varaible";
+@import "home/home";
+@import "Home/about";
+@import "Home/service";
+@import "Home/career";
+@import "Home/testimonial";
+@import "Home/faq";
+@import "Home/errorpage";
+@import "Home/ssingle";
+@import "Home/contact";
+@import "Home/blog";
+@import "Home/portfolio";
+@import "Home/features";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&display=swap');
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0%;
+    outline: none;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,224 @@
+body{
+  color: #6A6A6A;
+}
+#main-container {
+  margin-bottom: 320px;
+
+  .tab {
+    margin-top: 35px;
+    padding-left: 45px;
+
+    h3 {
+      line-height: normal;
+      border-bottom: 2px solid #81c83c;
+      font-family: "Lato", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #323232;
+    }
+
+    .tab__head {
+      margin: 0;
+      padding: 0;
+      float: left;
+      list-style: none;
+      height: 32px;
+      border-bottom: 1px solid #e7e7e7;
+      width: 100%;
+
+      li {
+        float: left;
+        cursor: pointer;
+        height: 32px;
+        color: #323232;
+        font-size: 15px;
+        font-weight: 700;
+        border-bottom: 0px;
+        overflow: hidden;
+        padding: 6px 12px;
+        position: relative;
+        border-radius: 3px 3px 0 0;
+        border-left: 1px solid #e7e7e7;
+        background-color: #e5e5e5;
+
+        &:hover {
+          background-color: #e5e5e5;
+          color: #81c83c;
+        }
+
+        &.active {
+          border: 1px solid #e7e7e7;
+          background-color: #fff;
+          color: #333;
+          border-bottom: 1px solid #fff;
+          display: block;
+
+          &:hover {
+            color: #81c83c
+          }
+        }
+      }
+
+      li:first-child {
+        margin-left: 10px;
+      }
+    }
+
+    .tab__container {
+      border-color: #dee2e6 #dee2e6 #fff;
+      border-top: 0px;
+      clear: both;
+      float: left;
+      width: 100%;
+    }
+
+    .tab__content {
+      padding: 20px;
+      display: none;
+      color: #6A6A6A;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.6em;
+    }
+  }
+
+
+
+  .test-head {
+    line-height: normal;
+    border-bottom: 2px solid #81c83c;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #323232;
+    margin-left: 45px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 70%;
+    display: block;
+    position: relative;
+  }
+
+  .swiper-slide {
+    padding-left: 45px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
+    .item {
+      position: absolute;
+
+      .testiminial_img {
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 80px;
+          height: 80px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(142, 142, 142);
+          border-image: initial;
+          padding: 3px;
+          border-radius: 100%;
+        }
+      }
+
+      .testiminial_text {
+        p {
+          font-size: 16px;
+          line-height: 24px;
+          max-width: 800px;
+          padding-top: 30px;
+          display: inline-block;
+          position: relative;
+          color: #6A6A6A;
+        }
+
+        h3 {
+          font-size: 18px;
+          text-transform: uppercase;
+          color: #6A6A6A;
+          margin: 10px 0px;
+          line-height: 32px;
+          font-weight: $f-weight;
+
+          span {
+            text-transform: uppercase;
+            display: block;
+            font-size: 14px;
+            color: #6A6A6A;
+            font-weight: $f-weight;
+            margin-top: -10px;
+          }
+        }
+      }
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .gap-40{
+    clear: both;
+    height: 40px;
+  }
+  .title-border{
+      font-size: 24px;
+      line-height: normal;
+      border-bottom: 2px solid #81c83c;
+      font-family: "Lato", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #323232;
+    
+  }
+  .facts{
+
+    i{
+      font-size: 36px;
+      text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.282);
+    }
+    h3{
+      font-size: 18px;
+    margin-top: 8px;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    }
+    .counter{
+      font-size: 42px;
+      font-weight: 700;
+      display: inline-block;
+      line-height: 1.6em;
+    }
+  }
+  .one{
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+  }
+  .two{
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+  }
+  .three{
+    background: rgba(0, 0, 0, 0.15);
+    padding: 15px;
+  }
+  .four{
+    background: rgba(0, 0, 0, 0.10);
+    padding: 15px;
+  }
+  
+
+}

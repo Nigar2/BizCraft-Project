@@ -1,0 +1,102 @@
+.portfolio{
+    padding-bottom: 60px;
+    .swiper {
+        width: 100%;
+        height: 100%;
+        &:hover{
+            .swiper-button-next{
+                display: block;
+                transform: translateX(-20px);
+                transition: .3s ease-in-out;
+            }
+            .swiper-button-prev{
+                display: block;
+                transform: translateX(20px);
+                transition: .3s ease-in-out;
+            }
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+    
+          .swiper-slide img {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .swiper-button-next,.swiper-button-prev{
+            border: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.725);
+            padding: 4px 16px;
+            width: 55px;
+            height: 55px;
+            color: #fff;
+            transform: translateX(70px);
+          }
+          .swiper-button-prev{
+            transform: translateX(-70px);
+          }
+      }   
+
+      .sidebar{
+        padding-top: 10px;
+        h3{
+            font-size: 20px;
+            padding-bottom: 20px;
+            font-weight: 400;
+            color: #323232;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        p{
+            font-size: 18px;
+            color: #6A6A6A;
+            font-family:"Lato" sans-serif;
+        }
+        button {
+            @include btn(inherit,30px,10px 28px,"Lato" sans-serif,12px, 500, uppercase,0.3s ease-in-out);
+            border: 2px solid $main-color;
+            color: $main-color;
+            &:hover {
+              background-color: $main-color;
+              color: $w-color;
+            }
+          }
+      }
+         
+}
+
+.fixed {
+  background-color:$b-color !important;
+  color:$w-color !important;
+  padding: 40px 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  transition: 0.7s ease-in-out;
+  transform: translateY(-40px);
+
+  p {
+    a {
+      color: $w-color !important;
+    }
+  }
+  ul {
+    li {
+      a {
+        color: $w-color !important;
+      }
+    }
+  }
+}

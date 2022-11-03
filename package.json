@@ -1,0 +1,26 @@
+{
+  "name": "bizcraft-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nigar2/BizCraft-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nigar2/BizCraft-Project/issues"
+  },
+  "homepage": "https://github.com/Nigar2/BizCraft-Project#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.2.1",
+    "bootstrap-icons": "^1.9.1",
+    "three": "^0.145.0"
+  }
+}
