@@ -45,6 +45,7 @@
                             <li><a href="features.html">features</a></li>
                             <li><a href="contact.html">contact</a></li>
                         </ul>
+                      
                     </div>
                 </div>
             </div>
@@ -197,13 +198,13 @@
         
                             <div class="widget-tab">
                                 <ul class="nav-tabs">
-                                    <li  class="navitem"><a class="nav-link active" href="#popular-tab" onclick="openTab('popular-tab')">popular</a></li>
-                                    <li  class="navitem"><a class="nav-link" href="#recent-tab"onclick="openTab('recent-tab')">recent</a></li>
-                                    <li  class="navitem"><a class="nav-link" href="#comments-tab" onclick="openTab('comments-tab')">comments</a></li>
+                                    <li  class="navitem active"><a rel="nav1" class="nav-link active" href="#popular-tab" >popular</a></li>
+                                    <li  class="navitem"><a rel="nav2" class="nav-link" href="#recent-tab">recent</a></li>
+                                    <li  class="navitem"><a rel="nav3" class="nav-link" href="#comments-tab" >comments</a></li>
                                 </ul>
                                 <div class="tab-content">
-                                    <div  class="tabpane-active" id="popular-tab">
-                                        <ul class="list-unstyled clearfix">
+                                    <div id="nav1" class="tabpane active" id="popular-tab">
+                                        <ul  class="list-unstyled clearfix">
                                             <li>
                                                 <div class="posts-thumb ">
                                                     <a href="#">
@@ -260,7 +261,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="tabpane" id="recent-tab">
+                                    <div  id="nav2" class="tabpane" id="recent-tab">
                                         <ul class="list-unstyled clearfix">
                                             <li>
                                                 <div class="posts-thumb ">
@@ -299,8 +300,8 @@
                                         </ul>
                                     </div>
         
-                                    <div class="tabpane" id="comments-tab">
-                                        <ul class="list-unstyled clearfix">
+                                    <div id="nav3" class="tabpane" id="comments-tab">
+                                        <ul  class="list-unstyled clearfix">
                                             <li>
                                                 <div class="posts-avator ">
                                                     <a href="#">

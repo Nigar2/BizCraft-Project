@@ -84,6 +84,92 @@
         transform: rotateY(90deg);
       }
 }
+.wrapper2{
+  margin-top: 40px;
+  h4{
+      font-weight: 400;
+      font-size: 22px;
+      letter-spacing: 1.4px;
+      font-family: "Lato", sans-serif;
+      border-bottom: 2px solid  #81c83c ;
+  }
+  p{
+      font-size: 14px;
+      color: rgb(113, 108, 108);
+  }
+
+  .block2 {
+      width: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 5px;
+      background-color: #e7e7e7;
+      height: 41px;
+    }
+    .title2 {
+      border-radius: 5px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      padding-left: 23px;
+      box-sizing: border-box;
+      height: 41px;
+      color: white;
+      background-color: #9c9a9a;
+      line-height: 41px;
+      cursor: pointer;
+      position: relative;
+    }
+    .block2{
+      background-color: #fff;
+      border: 1px solid lightgrey;
+       .title2 {
+          color:rgb(113, 108, 108);
+          font-weight: 600;
+          font-family: "Lato", sans-serif;
+          text-transform: uppercase;
+          background-color: #e7e7e7;
+        }
+    }
+    .active-block {
+      height: min-content;
+    }
+    .block2.active-block .title2 {
+      color:rgb(113, 108, 108);
+          font-weight: 600;
+          font-family: "Lato", sans-serif;
+          text-transform: uppercase;
+          background-color: #e7e7e7;
+    
+    }
+    
+    .text {
+      margin: 8px 20px;
+      li{
+        list-style-type: square;
+        font-size: 14px;
+        color: #696666;
+        
+        line-height: 18px;
+        
+      }
+    }
+    .arrow {
+      border: 8px solid transparent;
+      border-top: 8px solid #696666;
+      transition: all 0.3s;
+      position: absolute;
+      right: 10px;
+      top: 16px;
+    }
+    .active-block .arrow {
+      border: 8px solid transparent;
+      border-bottom: 8px solid #696666;
+      top: 10px;
+    }
+    .arrow::before{
+      transform: rotateY(90deg);
+    }
+}
 .btn{
     margin-top: 10px;
     a{
@@ -122,6 +208,9 @@
                 color: rgb(113, 108, 108);
             
         }
+        @media (max-width:768px) {
+          padding: 0px 10px;
+        }
     
 }
 
@@ -133,7 +222,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99;
+  z-index: +99;
   transition: 0.7s ease-in-out;
   transform: translateY(-40px);
 

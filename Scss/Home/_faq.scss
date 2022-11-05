@@ -60,6 +60,21 @@
       line-height: 1.6em;
     }
   }
+  @media (max-width:768px) {
+    .ques{
+      text-align: center;
+      display: block;
+      .quesicon{
+        border: none;
+      }
+      h3{
+        font-size: 30px;
+      }
+    }
+    .faq-box{
+      padding-right: 8px;
+    }
+  }
 }
 
 .fixed {

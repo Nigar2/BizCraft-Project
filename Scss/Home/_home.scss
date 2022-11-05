@@ -355,16 +355,7 @@ header {
         gap: 20px;
 
         .btn1 {
-          @include btn(
-            inherit,
-            30px,
-            10px 28px,
-            "Lato" sans-serif,
-            12px,
-            500,
-            uppercase,
-            0.3s ease-in-out
-          );
+          @include btn(inherit,30px, 10px 28px,"Lato" sans-serif, 12px,500,uppercase,0.3s ease-in-out );
           border: 2px solid $w-color;
           color: $w-color;
           &:hover {
@@ -374,16 +365,7 @@ header {
         }
 
         .btn2 {
-          @include btn(
-            inherit,
-            30px,
-            10px 28px,
-            "Lato" sans-serif,
-            12px,
-            500,
-            uppercase,
-            0.3s ease-in-out
-          );
+          @include btn(inherit,30px,10px 28px,"Lato" sans-serif,12px,500, uppercase,0.3s ease-in-out);
           border: 2px solid $main-color;
           color: $main-color;
           &:hover {
@@ -713,6 +695,9 @@ main {
         padding: 8px;
         margin-bottom: 10px;
         transition: 0.2s ease-in-out;
+        i{
+          font-size: 30px;
+        }
 
         &:hover {
           color: $main-color;
@@ -756,6 +741,18 @@ main {
         padding: 0px 20px;
       }
     }
+    @media (max-width:768px) {
+      .services{
+        display: block;
+        text-align: center;
+        .serviceicon{
+          border: none;
+        }
+        h3{
+          font-size: 26px;
+        }
+      }
+    }
   }
 
   .isotope {
@@ -787,16 +784,7 @@ main {
 
       .isotope_text {
         p {
-          color: #323232;
-          padding: 0;
-          margin: 0;
-          border-left: 2px solid #e7e7e7;
-          padding-left: 15px;
-          text-transform: uppercase;
-          font-size: 32px;
-          font-family: "Lato" sans-serif;
-          font-weight: $f-weight;
-          letter-spacing: 0.5px;
+         @include isotextP($lg-color,0,0,2px solid #e7e7e7,15px,uppercase,32px, "Lato" sans-serif,$f-weight,00.5px)
         }
       }
     }
@@ -807,13 +795,7 @@ main {
     }
 
     .button {
-      padding: 2px 14px;
-      border: 1px solid #ddd;
-      color: #323232;
-      cursor: pointer;
-      background-color: inherit;
-      margin: 0 8px;
-      transition: 0.2s ease-in;
+     @include iso-btn(2px 14px,1px solid #ddd,$lg-color,pointer,inherit,0 8px,0.2s ease-in)
     }
 
     .button:hover {
@@ -857,50 +839,20 @@ main {
       }
 
       .overlay-opacity {
-        transition: 0.5s ease;
-        opacity: 0;
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+       @include iso-over(0.5s ease,0,absolute,100%,50%,50%,translate(-50%,-50%),center);
         h3 {
-          font-size: 16px;
-          color: $w-color;
-          opacity: 0;
-          margin: 25% 0 10px 0;
-          transition: transform 0.35s;
-          transform: translate3d(0, 100%, 0);
-          font-family: "Lato", sans-serif;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-          font-weight: $f-weight;
+          @include overh3(16px,$w-color,0,25% 0 10px 0,transform 0.35s,translate3d(0,100%,0),"Lato" sans-serif,uppercase,0.5px,$f-weight)
         }
 
         a {
-          color: $w-color;
-          font-size: 25px;
-          margin: 5px 5px 10px;
-          display: inline-block;
-          z-index: 1;
-          position: relative;
-          cursor: pointer;
+          @include overa($w-color,25px,5px 5px 10px,inline-block,1,relative,pointer);
         }
         .link {
           font-size: 30px;
         }
       }
       .overlay-opacity::before {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        content: "";
+        @include overbefore(absolute,0px,0,0,0,100%,100%,1px solid rgba(255, 255, 255, 0.3)," " )
       }
     }
     @media (max-width:768px) {
@@ -921,12 +873,7 @@ main {
 
   .number {
     .num_row {
-      max-width: 100%;
-      display: flex;
-      background-color: #323232;
-      text-align: center;
-      color: $w-color;
-      visibility: visible;
+     @include numrow(100%,$lg-color,center,$w-color,visible);
 
       .number_counter {
         width: 100%;
@@ -1093,30 +1040,23 @@ main {
       margin-bottom: 30px;
 
       &:hover {
-        .isotope_icon {
+        .team_icon {
           color: $main-color;
         }
       }
 
-      .isotope_icon {
+      .team_icon {
         color: $g-color;
         transition: 0.2s ease-in-out;
         padding-right: 15px;
       }
 
-      .isotope_text {
+      .team_text {
         padding-left: 15px;
         border-left: 2px solid #e7e7e7;
 
         h3 {
-          color: #161515;
-          padding: 0;
-          margin: 0;
-          text-transform: uppercase;
-          font-size: 30px;
-          font-family: "Lato" sans-serif;
-          font-weight: $f-weight;
-          letter-spacing: 0.3px;
+          @include teamh3($lg-color,0,0,up,30px,"Lato" sans-serif,$f-weight,0.3px)
         }
 
         .little_text {
@@ -1154,25 +1094,13 @@ main {
         }
 
         .img-top {
-          position: absolute;
-          display: block;
-          float: left;
-          border-left: 120px solid $w-color;
-          border-right: 120px solid $w-color;
-          top: 0;
-          border-top: 0px solid transparent;
-          border-bottom: 75px solid transparent;
+        @include teamtop(absolute,left,120px solid $w-color,120px solid $w-color,0px solid transparent,75px solid transparent);
+        top: 0;
         }
 
         .img-bottom {
-          position: absolute;
-          display: block;
-          float: left;
-          border-left: 120px solid $w-color;
-          border-right: 120px solid $w-color;
-          bottom: 0px;
-          border-bottom: 0px solid transparent;
-          border-top: 75px solid transparent;
+          @include teamtop(absolute,left,120px solid $w-color,120px solid $w-color,75px solid transparent,0px solid transparent);
+          bottom: 0;
         }
       }
 
@@ -1252,28 +1180,15 @@ main {
   }
 
   .parallax {
-    margin: 60px 0px;
-    color: rgb(255, 255, 255) !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-    background-repeat: no-repeat;
-    background-position: 50% 0px;
-    position: relative;
-    padding: 150px 0px;
-    background: url(https://demo.themefisher.com/bizcraft/images/parallax/parallax1.jpg);
+   @include parallax(60px 0px,$w-color,cover,fixed,no-repeat,50% 0px,relative,150px 0px);
+   background: url(https://demo.themefisher.com/bizcraft/images/parallax/parallax1.jpg);
     .paral {
       position: relative;
       width: 100%;
       color: $w-color;
     }
     .overlay {
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
+      @include overlay(absolute,0,0,0,0,100%,100%);
       background: url(https://demo.themefisher.com/bizcraft/images/overaly.png);
     }
 
@@ -1298,16 +1213,9 @@ main {
       padding-top: 15px;
 
       .btn1 {
-        background-color: inherit;
+        @include btn(inherit,30px, 10px 28px,"Lato" sans-serif, 12px,500,uppercase,0.3s ease-in-out );
         border: 2px solid $w-color;
-        border-radius: 30px;
-        padding: 10px 28px;
         color: $w-color;
-        font-family: "Lato" sans-serif;
-        font-size: 12px;
-        font-weight: 500;
-        text-transform: uppercase;
-        transition: 0.3s ease-in-out;
 
         &:hover {
           background-color: $w-color;
@@ -1316,16 +1224,9 @@ main {
       }
 
       .btn2 {
-        background-color: inherit;
-        border: 2px solid$main-color;
-        border-radius: 30px;
-        padding: 10px 28px;
-        color: $main-color;
-        font-family: "Lato" sans-serif;
-        font-size: 12px;
-        font-weight: 500;
-        text-transform: uppercase;
-        transition: 0.3s ease-in-out;
+        @include btn(inherit,30px,10px 28px,"Lato" sans-serif,12px,500, uppercase,0.3s ease-in-out);
+          border: 2px solid $main-color;
+          color: $main-color;
 
         &:hover {
           background-color: $main-color;
@@ -1366,12 +1267,7 @@ main {
         margin-left: 15px;
 
         h3 {
-          color: $b-color;
-          font-weight: 450;
-          letter-spacing: 1px;
-          font-family: "Lato" sans-serif;
-          margin: 0;
-          padding: 0;
+          @include prich3($b-color,450,1px,"Lato" sans-serif,0,0)
         }
 
         p {
@@ -1386,12 +1282,7 @@ main {
       margin-bottom: 60px;
 
       .plan-name {
-        display: block;
-        font-size: 24px;
-        line-height: 30px;
-        font-weight: 700;
-        padding: 20px 0;
-        color: #959595;
+       @include pname(block,24px,30px,700,20px 0,#959595);
 
         small {
           display: block;
@@ -1402,25 +1293,9 @@ main {
       }
 
       .plan-price {
-        font-size: 48px;
-        padding: 28px 0;
-        margin-bottom: 28px;
-        position: relative;
-        background: #f2f2f2;
-        transition: 0.3s;
-        font-family: "Lato", sans-serif;
-        font-weight: $f-weight;
-        line-height: 1.6em;
-        color: $g-color;
-
+        @include p-price(48px,28px 0,relative,#f2f2f2,0.3s,"Lato",sans-serif,$f-weight,1.6em,$g-color);
         .currency {
-          top: 1.5em;
-          left: 2.7em;
-          position: absolute;
-          font-size: 60%;
-          line-height: 0;
-          font-weight: 600;
-          vertical-align: baseline;
+         @include currency(1.5em,2.7em,absolute,60%,0,600,baseline)
         }
 
         sub {
@@ -1443,14 +1318,7 @@ main {
       }
 
       .plan-price::after {
-        bottom: -30px;
-        border: solid transparent;
-        content: " ";
-        position: absolute;
-        border-width: 15px;
-        border-top-color: #f2f2f2;
-        left: 50%;
-        margin-left: -16px;
+       @include planafter(-30px,solid transparent,"",absolute,15px,#f2f2f2,50%,-16px)
       }
 
       .list-unstyled {
@@ -1460,11 +1328,7 @@ main {
         list-style: none;
 
         li {
-          border-top: 1px dashed #dedede;
-          padding: 12px 29px;
-          font-weight: $f-weight;
-          font-size: 14px;
-          color: $g-color;
+         @include plan-li(1px dashed #dedede,12px 29px,$f-weight,14px,$g-color);
         }
 
         li:first-child {
@@ -1473,19 +1337,7 @@ main {
       }
 
       a {
-        background-color: $w-color !important;
-        margin-top: 25px;
-        margin-bottom: -20px;
-        padding: 8px 30px;
-        border: 2px solid$main-color;
-        color: $main-color !important;
-        border-radius: 50px;
-        padding: 8px 30px;
-        background: none;
-        font-size: 14px;
-        text-transform: uppercase;
-        transition: all 0.3s ease 0s;
-        cursor: pointer;
+        @include plana($w-color,25px,-20px,2px solid $main-color,$main-color,50px,8px 30px,none,14px,uppercase,all 0.3s ease 0s,pointer);
       }
 
       &:hover {
@@ -1508,6 +1360,9 @@ main {
         .pricingicon{
           border: none !important;
         }
+        h3{
+          font-size: 30px;
+        }
       }
       .currency{
         left: 3.7em !important;
@@ -1516,22 +1371,11 @@ main {
   }
 
   .slider-parallax {
-    margin: 60px 0px;
-    color: rgb(255, 255, 255);
-    position: relative;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-    background-repeat: no-repeat;
-    background-position: 50% 0px;
-    padding: 100px 0px;
+    @include parallax(60px 0px,$w-color,cover,fixed,no-repeat,50% 0px,relative,150px 0px);
     background: url(https://demo.themefisher.com/bizcraft/images/parallax/parallax2.jpg);
 
     .parallax-overlay {
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      width: 100%;
-      height: 100%;
+      @include overlay(absolute,0,0,0,0,100%,100%);
       background: url(https://demo.themefisher.com/bizcraft/images/overaly.png);
     }
 
@@ -1541,11 +1385,7 @@ main {
     }
 
     .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include swip-sl(center,18px,center,center);
 
       .item {
         .testiminial_img {
@@ -1553,26 +1393,13 @@ main {
           justify-content: center;
 
           img {
-            width: 80px;
-            height: 80px;
-            border-width: 1px;
-            border-style: solid;
-            border-color: rgb(142, 142, 142);
-            border-image: initial;
-            padding: 3px;
-            border-radius: 100%;
+           @include testimg(80px,80px,1px,solid, rgb(142, 142, 142),initial,3px,100%) 
           }
         }
 
         .testiminial_text {
           p {
-            font-size: 16px;
-            line-height: 24px;
-            max-width: 800px;
-            padding-top: 30px;
-            display: inline-block;
-            position: relative;
-            color: rgb(255, 255, 255);
+            @include testip(16px,24px,800px,30px,inline-block,relative, rgb(255, 255, 255));
           }
 
           h3 {

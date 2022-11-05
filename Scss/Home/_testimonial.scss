@@ -12,13 +12,14 @@
         color: #81c83c;
       }
     }
-
     .serviceicon {
       border-right: 2px solid lightgrey;
       color: #959595;
       padding: 8px;
-      margin-bottom: 10px;
       transition: 0.2s ease-in-out;
+      i{
+        font-size: 30px;
+      }
 
       &:hover {
         color: #81c83c;
@@ -40,6 +41,16 @@
       p {
         font-size: 14px;
         color: #6a6a6a;
+      }
+    }
+    @media (max-width:768px) {
+      text-align: center;
+      display: block;
+      .serviceicon{
+        border: none;
+      }
+      h3{
+        font-size: 28px;
       }
     }
   }

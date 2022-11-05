@@ -82,6 +82,71 @@ header {
                 }
             }
         }
+        @media (max-width: 768px) {
+            .logo {
+              display: inline;
+              margin-left: 20px;
+              text-align: start !important;
+              img{
+                padding-top: 10px;
+              }
+            }
+      
+            .mobile-nav {
+              position: relative;
+            }
+            .burger {
+              @include burgers(
+                absolute,-33px,25px !important,$main-color,0.25rem 00.75rem,1.25rem,1,block
+              );
+      
+              .burger.active.bar:nth-child(2) {
+                opacity: 0;
+              }
+      
+              .burger.active.bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+              }
+      
+              .burger.active.bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+              }
+            }
+            ul {
+              @include ull(fixed,100%,-100%,106px,0,column,$b-color,hidden,center,0.3s
+              );
+      
+              li {
+
+                margin: 16px 0;
+                display: inline-flex;
+                cursor: pointer;
+                padding: 10px 0px 20px 0px;
+
+                &:hover {
+                    .dropdown {
+                        display: block;
+           
+                        li{
+                            display: block;
+                            width: 100%;
+                            z-index: +11;
+                            .nav-link{
+                                display: block;
+                                width: 100%;
+                                z-index: +11;
+                            }
+                        }
+
+                    }
+              }
+            }
+            }
+            .nav-menu.active {
+              left: 0;
+              overflow: hidden;
+            }
+          }
     }
 
     .banner-area {
@@ -89,6 +154,9 @@ header {
 
         img {
             width: 100%;
+            @media (max-width:768px) {
+                height: 200px;
+            }
         }
 
         .banner-title{
@@ -330,6 +398,24 @@ main {
             &:hover{
                 background-color: #81c83c;
                 color: #fff;
+            }
+        }
+    }
+
+    @media (max-width:768px) {
+        .company{
+            margin-bottom: 20px !important;
+        }
+        .vertical-tab{
+            button{
+                padding: 16px !important;
+            }
+            .tabcontent{
+                padding: 0px 16px !important ;
+                svg{
+                    width: 80px;
+                    height: 80px;
+                }
             }
         }
     }

@@ -130,6 +130,14 @@
         }
 
     }
+    @media (max-width:768px) {
+        p{
+            padding-right: 0px !important;
+        }
+        .widget-category{
+            margin-top: 30px;
+        }
+    }
 }
 .fixed {
     background-color:$b-color !important;

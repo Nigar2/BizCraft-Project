@@ -1,13 +1,4 @@
-@mixin btn(
-  $b-col,
-  $b-rad,
-  $pad,
-  $f-fam,
-  $f-siz,
-  $f-weg,
-  $t-tr,
-  $transt
-) {
+@mixin btn( $b-col,$b-rad, $pad, $f-fam, $f-siz, $f-weg, $t-tr, $transt) {
   background-color: inherit;
   border-radius: 30px;
   padding: 10px 28px;
@@ -61,4 +52,228 @@
   overflow: hidden;
   text-align: center;
   transition: 0.3s;
+}
+
+@mixin isotextP($col,$pad,$margin,$bor-l,$pad-l,$text-t,$f-size,$f-fam,$f-weg,$let-spac) {
+  color: #323232;
+  padding: 0;
+  margin: 0;
+  border-left: 2px solid #e7e7e7;
+  padding-left: 15px;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-family: "Lato" sans-serif;
+  font-weight: $f-weight;
+  letter-spacing: 0.5px;
+}
+
+@mixin iso-btn($pad,$border,$col,$cur,$back-c,$margin,$transt){
+  padding: 2px 14px;
+  border: 1px solid #ddd;
+  color: #323232;
+  cursor: pointer;
+  background-color: inherit;
+  margin: 0 8px;
+  transition: 0.2s ease-in;
+}
+
+@mixin iso-over($transt,$opa,$posit,$width,$top,$left,$trans,$text-al) {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@mixin overh3($f-size,$col,$opa,$margin,$transt,$trans,$f-fam,$text-t,$let-spa,$f-weig) {
+  font-size: 16px;
+  color: $w-color;
+  opacity: 0;
+  margin: 25% 0 10px 0;
+  transition: transform 0.35s;
+  transform: translate3d(0, 100%, 0);
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: $f-weight;
+}
+
+@mixin overa($col,$f-size,$margin,$dis,$z-ind,$pos,$curs) {
+  color: $w-color;
+  font-size: 25px;
+  margin: 5px 5px 10px;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+};
+
+@mixin overbefore($pos,$top,$rig,$bot,$left,$widt,$heg,$bor,$cont) {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  content: "";
+}
+
+@mixin numrow($max-wid,$back-col,$t-alig,$col,$visib) {
+  max-width: 100%;
+  display: flex;
+  background-color: #323232;
+  text-align: center;
+  color: $w-color;
+  visibility: visible;
+}
+
+@mixin teamh3($col,$pad,$mar,$text-t,$f-size,$f-fam,$f-weig,$let-spac) {
+  color: $lg-color;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: "Lato" sans-serif;
+  font-weight: $f-weight;
+  letter-spacing: 0.3px;
+}
+
+@mixin teamtop($pos,$flot,$b-left,$b-rig,$bor-t,$bor-b) {
+  position: absolute;
+  display: block;
+  float: left;
+  border-left: 120px solid $w-color;
+  border-right: 120px solid $w-color;
+  border-top: $bor-t;
+  border-bottom:$bor-b;
+}
+
+@mixin parallax($mar,$col,$back-s,$back-att,$back-rep,$back-pos,$pos,$pad) {
+  margin: 60px 0px;
+  color: $w-color !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat;
+  background-position: 50% 0px;
+  position: relative;
+  padding: 150px 0px;
+}
+
+@mixin overlay($pos,$lef,$top,$bot,$rig,$width,$heg) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin prich3($b-color,$f-weig,$let-spac,$f-fam,$margin,$pad) {
+  color: $b-color;
+  font-weight: 450;
+  letter-spacing: 1px;
+  font-family: "Lato" sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin pname($dis,$f-size,$li-heig,$f-weig,$pad,$col) {
+  display: block;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  padding: 20px 0;
+  color: #959595;
+}
+
+@mixin p-price($f-size,$pad,$mar-bot,$pos,$back,$trant,$f-fam,$fweig,$li-hg,$col) {
+  font-size: 48px;
+  padding: 28px 0;
+  margin-bottom: 28px;
+  position: relative;
+  background: #f2f2f2;
+  transition: 0.3s;
+  font-family: "Lato", sans-serif;
+  font-weight: $f-weight;
+  line-height: 1.6em;
+  color: $g-color;
+}
+
+@mixin currency($top,$left,$pos,$f-size,$li-heg,$f-weig,$ver-alig) {
+  top: 1.5em;
+  left: 2.7em;
+  position: absolute;
+  font-size: 60%;
+  line-height: 0;
+  font-weight: 600;
+  vertical-align: baseline;
+}
+
+@mixin planafter($bot,$bor,$cont,$pos,$bor-wi,$bor-tc,$left,$margin-l) {
+  bottom: -30px;
+  border: solid transparent;
+  content: " ";
+  position: absolute;
+  border-width: 15px;
+  border-top-color: #f2f2f2;
+  left: 50%;
+  margin-left: -16px;
+}
+
+@mixin plan-li($bor-t,$pad,$f-weig,$f-size,$col) {
+  border-top: 1px dashed #dedede;
+  padding: 12px 29px;
+  font-weight: $f-weight;
+  font-size: 14px;
+  color: $g-color;
+}
+
+@mixin plana($back-c,$mar-top,$mar-bot,$bor,$col,$bor-rad,$pad,$back,$f-size,$t-trans,$transt,$cur) {
+  background-color: $w-color !important;
+  margin-top: 25px;
+  margin-bottom: -20px;
+  border: 2px solid $main-color;
+  color: $main-color !important;
+  border-radius: 50px;
+  padding: 8px 30px;
+  background: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+@mixin swip-sl($t-align,$f-size,$jus-con,$align-i) {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin testimg($width,$heig,$bor-w,$bor-s,$bor-c,$bor-im,$pad,$bor-r) {
+  width: 80px;
+  height: 80px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(142, 142, 142);
+  border-image: initial;
+  padding: 3px;
+  border-radius: 100%;
+}
+
+@mixin testip($f-size,$li-heig,$max-wid,$pad-top,$dis,$pos,$col) {
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 800px;
+  padding-top: 30px;
+  display: inline-block;
+  position: relative;
+  color: rgb(255, 255, 255);
 }

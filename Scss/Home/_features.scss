@@ -83,8 +83,6 @@ body{
     }
   }
 
-
-
   .test-head {
     line-height: normal;
     border-bottom: 2px solid #81c83c;
@@ -219,6 +217,23 @@ body{
     background: rgba(0, 0, 0, 0.10);
     padding: 15px;
   }
+
+  @media (max-width:768px) {
+    .tab{  
+      padding-left: 0px;
+    }
+    .swiper{
+      height: 90%;
+      margin-bottom: 50px;
+    }
+    .swiper-slide{
+      padding-left: 0px;
+    }
+    .test-head{
+      margin-left: 0px;
+    }
+  }
+
   
 
 }
