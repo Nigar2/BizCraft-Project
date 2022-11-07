@@ -277,3 +277,150 @@
   position: relative;
   color: rgb(255, 255, 255);
 }
+
+@mixin testih3($f-size,$text-t,$color,$mar,$lin-heig,$f-weig) {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  margin: 10px 0px;
+  line-height: 32px;
+  font-weight: $f-weight;
+}
+
+@mixin testispan($text-t,$dis,$f-size,$col,$-weig,$marg-t) {
+  text-transform: uppercase;
+  display: block;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  font-weight: $f-weight;
+  margin-top: -10px;
+}
+
+@mixin slider($over,$wid,$heig,$mar,$pad) {
+  overflow: hidden;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+@mixin footh3($mar-b,$f-weig,$f-size,$text-t) {
+  margin-bottom: 25px;
+    font-weight: $f-weight;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+@mixin footh4($f-size,$line-he,$f-fam,$text-t,$let-spac) {
+  font-size: 14px;
+      line-height: normal;
+      font-family: Lato, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+}
+
+@mixin formcont($pos,$b-t-r,$b-b-r,$bor,$box,$pad,$heig,$back,$col,$f-size,$bor-rad) {
+  position: relative;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid rgba(255, 255, 255, 0.251);
+    box-shadow: none;
+    padding: 6px 20px;
+    height: 50px;
+    background: none;
+    color: #959595;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+@mixin formbutton($col,$b-r,$pad,$back,$f-size,$text-t,$trans,$bor-wid) {
+  color: #323232;
+      border-radius: 50px;
+      padding: 10px 30px;
+      background: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      transition: all 0.3s ease 0s;
+      border-width: 2px;
+}
+
+@mixin copyli($just-c,$text-a,$gap,$mar-l) {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  margin-left: 0;
+}
+
+@mixin copyinfo($f-size,$bor-t,$max-wid,$mar,$pad-t) {
+  font-size: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    max-width: 850px;
+    margin: 30px auto 0;
+    padding-top: 15px;
+}
+
+@mixin copybefore($back,$cont,$heig,$top,$pos,$wid,$z-in,$trans) {
+  background: #191919;
+  content: "";
+  height: 75px;
+  top: -37px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  transform: skew(0deg, -2deg);
+}
+
+@mixin endbutton($dis,$back,$wid,$heig,$bor-r,$pos,$bot,$rig,$transt,$opo,$z-in,$bor,$pad,$bor-wid) {
+  display: inline-block;
+  background: none;
+  width: 50px;
+  height: 40px;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 40px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  z-index: 1000;
+  border: 1px solid $w-color;
+  padding: 10px 30px;
+  border-width: 2px;
+}
+
+@mixin but-i($f-siz,$col,$pos,$rig,$top) {
+  font-size: 12px;
+  color: $w-color;
+  position: absolute;
+  right: 23px;
+  top: 10px;
+}
+
+@mixin modal-con($wid,$pos,$top,$rig) {
+  width: 600px;
+  position: absolute;
+  top: 100px; 
+  right: 0px;
+}
+
+@mixin btn-clos($bor,$f-size,$wid,$heg,$bor-r) {
+  border: 1px solid gray;
+  font-size: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+@mixin link($back-c,$pad,$jus-con,$bor,$wid,$tex-al,$mar-lef,$bor-rad,$transt) {
+ background-color: #1d9bf0;
+ padding: 0px 0px 3px 3px;
+ display: flex;
+ justify-content: center;
+ border: none;
+ width: 40px;
+ text-align: center;
+ margin-left: 4px;
+ border-radius: 22px;
+ transition: .2s ease-in;
+}
+
