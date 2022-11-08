@@ -1,3 +1,36 @@
+@mixin ctnpre($al-itm,$cur,$heig,$jus-con,$pos,$lef,$top,$width,$z-in) {
+  align-items: center;
+  cursor: none;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 900;
+}
+
+@mixin ctnload($anima,$col,$con,$lef,$opa,$pos,$top,$transt) {
+  animation: letters-loading 4s infinite;
+  color: #000000;
+  content: attr(data-text-preloader);
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transform: rotateY(-90deg);
+}
+
+@mixin ctnpre-spin($anima,$b-rad,$bor,$bor0t,$heig,$mar,$widt) {
+  animation: spinner 1s infinite linear;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #000000;
+  height: 6em;
+  margin: 0 auto 3.5em auto;
+  width: 6em;
+}
 @mixin btn( $b-col,$b-rad, $pad, $f-fam, $f-siz, $f-weg, $t-tr, $transt) {
   background-color: inherit;
   border-radius: 30px;

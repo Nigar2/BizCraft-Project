@@ -35,29 +35,14 @@ window.addEventListener('scroll',changeS);
 var swiper = new Swiper(".mySwiper", {
     pagination: {
       el: ".swiper-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<li class="' + className + '">' + (index + 1) + "</li>";
-      },
+       dynamicBullets: true,
+    },
+    autoplay: {
+      delay: 5000,
     },
   });
 
-let tabs = document.querySelectorAll('.slick'),
-contents = document.querySelectorAll('.swiper-slide');
 
-tabs.forEach((tab,index)=>{
-  tab.addEventListener("click",()=>{
-    contents.forEach((content)=>{
-      content.classList.remove('is-active');
-    });
-    tab.forEach((tab)=>{
-      tab.classList.remove('is-active');
-    });
-
-    contents[index].classList.add('is-active');
-    tabs[index].classList.add('is-active');
-  });
-});
 
  //burgerlist//
   const burger = document.querySelector('.burger');
