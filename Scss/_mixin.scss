@@ -63,22 +63,23 @@
   text-transform: capitalize;
 }
 
-@mixin burgers($pos, $top, $right, $b-color, $pad, $f-size, $l-heg, $dis) {
+@mixin burgers($pos, $top, $right, $b-color, $pad, $f-size, $l-heg, $dis,$b-rad) {
   position: absolute;
-  top: -33px;
-  right: 25px;
+  top: -46px;
+  right: 16px;
   background-color: $main-color;
-  padding: 0.25rem 0.75rem;
+  padding: 9px 12px;
   font-size: 1.25rem;
   line-height: 1;
   display: block;
+  border-radius: 50% ;
 }
 
 @mixin ull($pos,$width,$left,$top,$gap,$f-dir,$b-color,$over,$ali,$transt) {
   position: fixed;
   width: 100%;
   left: -100%;
-  top: 106px;
+  top: 83px;
   gap: 0;
   flex-direction: column;
   background-color: $b-color;
@@ -312,10 +313,10 @@
 }
 
 @mixin testih3($f-size,$text-t,$color,$mar,$lin-heig,$f-weig) {
-  font-size: 18px;
-  text-transform: uppercase;
-  color: rgb(255, 255, 255);
-  margin: 10px 0px;
+  font-size: $f-size;
+  text-transform: $text-t;
+  color: $color;
+  margin: $mar;
   line-height: 32px;
   font-weight: $f-weight;
 }

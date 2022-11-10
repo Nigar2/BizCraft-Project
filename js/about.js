@@ -48,23 +48,7 @@ function openCity(evt, cityName) {
     counter("count4", 0, 76, 2000);
    });
 
-  //back to top
-
-var btn = $('#button');
-
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
-});
-
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
-});
-
+   
  //burgerlist//
  const burger = document.querySelector('.burger');
  const navMenu = document.querySelector('.nav-menu');

@@ -41,7 +41,14 @@ function classToggle(event) {
 }
 
 
-//scroll
+
+
+
+
+
+
+//nav scroll
+
 function changeS(){
   var navbar = document.getElementById('navbar');
   var scrollValue = window.scrollY;
@@ -51,24 +58,3 @@ function changeS(){
     navbar.classList.add('fixed');
   }
 }
-
-window.addEventListener('scroll',changeS);
-
-
-
-//back to top
-
-var btn = $('#button');
-
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 100) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
-});
-
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '100');
-});

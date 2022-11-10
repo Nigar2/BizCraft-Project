@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="Scss/style.css">
+    <link rel="icon" type="image/x-icon" href="Images/BC PNG 0.png">
+
     <title>BizCraft-Blog</title>
 </head>
 <body>
+    
     <header>
         <nav id="navbar">
             <div class="container">
@@ -33,10 +36,13 @@
                                 </ul>
                                 <i class="bi bi-caret-down-fill"></i>
                             </li>
-                            <li><a href="portfolio.html">portfolio</a></li>
-                            <li><a href="">pages</a><i class="bi bi-caret-down-fill"></i>
+                            <li><a href="">portfolio</a>
                                 <ul class="dropdown">
-                              
+                                    <li><a href="portfolio.html">Portfolio 1 </a></li>
+                                    <li><a href="portstatic.html">Portfolio 2</a></li>
+                                </ul> <i class="bi bi-caret-down-fill"></i></li>
+                            <li><a href="">pages</a><i class="bi bi-caret-down-fill"></i>
+                                <ul class="dropdown">                              
                                     <li><a href="http://127.0.0.1:5501/s-single.html">Services Single</a></li>
                                     <li><a href="http://127.0.0.1:5501/career.html">404 Page</a></li>
                                 </ul>
@@ -99,7 +105,7 @@
                                     the middle dolor sit amet.</p>
                             </div>
                             <div class="post-footer">
-                                <a href="blog.html" class="btn btn btn-outline-primary">Continue Reading <i class="bi bi-chevron-double-right"></i></i></a>
+                                <a href="blog.html" class="btn btn btn-outline-primary">Continue Reading</a>
                             </div>
                         </div>
         
@@ -113,7 +119,7 @@
                             </div>
                             <div class="post-header clearfix">
                                 <h2 class="post-title">
-                                    <a href="blog-item.html">Dolorem animi nisi autem blanditiis</a>
+                                    <a href="blog.html">Dolorem animi nisi autem blanditiis</a>
                                 </h2>
                                 <div class="post-meta">
                                     <span >Posted by <a href="#"> Admin</a></span>
@@ -133,7 +139,7 @@
                                     the middle dolor sit amet.</p>
                             </div>
                             <div class="post-footer">
-                                <a href="blog-item.html" class="btn btn btn-outline-primary">Continue Reading <i class="fa fa-angle-double-right">&nbsp;</i></a>
+                                <a href="blog.html" class="btn btn btn-outline-primary">Continue Reading</a>
                             </div>
                         </div>
         
@@ -191,8 +197,8 @@
                         <div class="sidebar-right mt-5 mt-lg-0">
                             <div class=" widget-search">
                                 <h3>Search</h3>
-                                <div id="search">
-                                    <input class="form-control-lg" placeholder="search" type="search">
+                                <div >
+                                    <input oninput="liveSearch()" id="search" class="form-control-lg" placeholder="search" type="search">
                                 </div>
                             </div>
         
@@ -205,7 +211,7 @@
                                 <div class="tab-content">
                                     <div id="nav1" class="tabpane active" id="popular-tab">
                                         <ul  class="list-unstyled clearfix">
-                                            <li>
+                                            <li  class="cards">
                                                 <div class="posts-thumb ">
                                                     <a href="#">
                                                         <img alt="img" src="https://demo.themefisher.com/bizcraft/images/blog/blog1.jpg">
@@ -222,7 +228,7 @@
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </li>
-                                            <li>
+                                            <li  class="cards">
                                                 <div class="posts-thumb ">
                                                     <a href="#">
                                                         <img alt="img" src="https://demo.themefisher.com/bizcraft/images/blog/blog2.jpg">
@@ -240,7 +246,7 @@
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </li>
-                                            <li>
+                                            <li  class="cards">
                                                 <div class="posts-thumb ">
                                                     <a href="#">
                                                         <img alt="img" src="https://demo.themefisher.com/bizcraft/images/blog/blog3.jpg">
@@ -263,14 +269,14 @@
         
                                     <div  id="nav2" class="tabpane" id="recent-tab">
                                         <ul class="list-unstyled clearfix">
-                                            <li>
+                                            <li class="cards">
                                                 <div class="posts-thumb ">
                                                     <a href="#">
                                                         <img alt="img" src="https://demo.themefisher.com/bizcraft/images/blog/blog3.jpg">
                                                     </a>
                                                 </div>
                                                 <div class="post-content">
-                                                    <h4 ><a href="#">Bulgaria claims to find Europe's 'oldest town'</a>
+                                                    <h4 ><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing.</a>
                                                     </h4>
                                                     <p class="post-meta">
                                                         <span class="post-author">Posted by <a href="#"> Admin</a></span>
@@ -280,14 +286,14 @@
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </li>
-                                            <li>
+                                            <li  class="cards">
                                                 <div class="posts-thumb ">
                                                     <a href="#">
                                                         <img alt="img" src="https://demo.themefisher.com/bizcraft/images/blog/blog1.jpg">
                                                     </a>
                                                 </div>
                                                 <div class="post-content">
-                                                    <h4 class="entry-title"><a href="#">Bulgaria claims to find Europe's 'oldest town'</a>
+                                                    <h4 class="entry-title"><a href="#">Lorem ipsum dolor sit amet, contact elit. Quas?</a>
                                                     </h4>
                                                     <p class="post-meta">
                                                         <span class="post-author">Posted by <a href="#"> Admin</a></span>
@@ -302,7 +308,7 @@
         
                                     <div id="nav3" class="tabpane" id="comments-tab">
                                         <ul  class="list-unstyled clearfix">
-                                            <li>
+                                            <li  class="cards">
                                                 <div class="posts-avator ">
                                                     <a href="#">
                                                         <img alt="img" src="https://demo.themefisher.com/bizcraft/images/blog/avator1.png">
@@ -319,7 +325,7 @@
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </li>
-                                            <li>
+                                            <li  class="cards">
                                                 <div class="posts-avator ">
                                                     <a href="#">
                                                         <img alt="img" src="https://demo.themefisher.com/bizcraft/images/blog/avator2.jpg">
@@ -339,9 +345,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-        
-                        
+                            </div>                 
                             <div class="widget-category">                       
                                 <h3>Blog Categories</h3>
                                 <ul class="category-list clearfix">

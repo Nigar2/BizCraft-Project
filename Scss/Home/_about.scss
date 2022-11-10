@@ -97,8 +97,7 @@ header {
             }
             .burger {
               @include burgers(
-                absolute,-33px,25px !important,$main-color,0.25rem 00.75rem,1.25rem,1,block
-              );
+                absolute,-46px,25px !important,$main-color,9px 12px,1.25rem,1,block,50%);
       
               .burger.active.bar:nth-child(2) {
                 opacity: 0;
@@ -113,7 +112,7 @@ header {
               }
             }
             ul {
-              @include ull(fixed,100%,-100%,106px,0,column,$b-color,hidden,center,0.3s
+              @include ull(fixed,100%,-100%,83px,0,column,$b-color,hidden,center,0.3s
               );
       
               li {

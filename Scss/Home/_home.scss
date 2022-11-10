@@ -1,3 +1,4 @@
+
 .no-scroll-y {
   overflow-y: hidden;
 }
@@ -21,7 +22,7 @@
 }
 
 .ctn-preloader .animation-preloader .txt-loading .letters-loading:before {
-  @include ctnload(letters-loading 4s infinite,#000000,attr(data-text-preloader),0,0,absolute,0,rotateY(-90deg)
+  @include ctnload(letters-loading 4s infinite,#000000,attr(data-text-preloader),0,0,absolute,0,rotateY(-90deg));
 }
 
 .ctn-preloader .animation-preloader .txt-loading .letters-loading {
@@ -228,7 +229,7 @@ header {
 
       .bar {
         display: block;
-        width: 25px;
+        width: 22px;
         height: 3px;
         margin: 5px auto;
         transition: 0.3s ease-in-out;
@@ -251,8 +252,7 @@ header {
       }
       .burger {
         @include burgers(
-          absolute,-33px,25px !important,$main-color,0.25rem 00.75rem,1.25rem,1,block
-        );
+          absolute,-46px,25px !important,$main-color,9px 12px,1.25rem,1,block,50% !important);
 
         .burger.active.bar:nth-child(2) {
           opacity: 0;
@@ -267,7 +267,7 @@ header {
         }
       }
       ul {
-        @include ull(fixed,100%,-100%,106px,0,column,$b-color,hidden,center,0.3s
+        @include ull(fixed,100%,-100%,83px,0,column,$b-color,hidden,center,0.3s
         );
 
         li {
@@ -718,7 +718,7 @@ main {
   .isotope {
     background: #f5f5f5;
     margin-top: 100px;
-
+    
     .grid {
       width: 100%;
       margin: auto;
@@ -770,7 +770,7 @@ main {
 
     .element-item {
       position: relative;
-      width: 379.5px;
+      width: 381px;
       background: rgba(0, 0, 0, 0.8);
 
       &:hover {
@@ -1124,13 +1124,13 @@ main {
     @media (max-width:768px) {
       .team_head{
         display: block;
-        .isotope_icon{
-          text-align: center;
+        text-align: center;
+        .team_icon{
           padding-bottom: 20px;
+          padding-right: 0;
         }
-        .isotope_text{
-          text-align: center;
-          border: none;
+        .team_text{        
+          border: none !important;
           .little_text{
             padding-top: 20px;
           }

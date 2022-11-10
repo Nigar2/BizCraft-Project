@@ -1,6 +1,6 @@
 .blog {
     .post {
-        margin: 0 0 40px;
+        margin: 40px 0 20px 0;
         margin-right: 110px;
         padding: 0 0 40px;
         box-sizing: border-box;
@@ -19,14 +19,14 @@
                 position: absolute;
                 top: 50px;
                 left: 0;
-                color: #fff;
-                background: #81c83c;
+                color:$w-color;
+                background:$main-color;
                 border-radius: 0 25px 25px 0;
                 padding: 5px 15px;
                 font-weight: 700;
 
                 a {
-                    color: #fff;
+                    color: $w-color;
                 }
             }
         }
@@ -42,10 +42,10 @@
                 letter-spacing: 0.5px;
 
                 a {
-                    color: #323232;
+                    color:$lg-color;
 
                     &:hover {
-                        color: #81c83c;
+                        color:$main-color;
                     }
                 }
             }
@@ -127,16 +127,20 @@
     .pagination {
         .page-item.active {
             a {
-                color: #fff;
-                background: #81c83c;
-                border-color: #81c83c;
+                color:$w-color;
+                background:$main-color;
+                border-color: $main-color;
             }
         }
 
         a {
-            color: #81c83c;
+            color:$main-color;
             border-radius: 0 !important;
             margin-right: 8px;
+            &:hover{
+                background-color: $main-color;
+                color: $w-color;
+            }
 
         }
     }
@@ -166,7 +170,10 @@
                 background: none;
                 color: #959595;
                 font-size: 14px;
-                border-radius: 0
+                border-radius: 0;
+                &:focus{
+                    border-color: $main-color;
+                }
             }
         }
 
@@ -423,6 +430,7 @@
         }
     }
 }
+.is-hidden { display: none; }
 .fixed {
     background-color:$b-color !important;
     color:$w-color !important;
