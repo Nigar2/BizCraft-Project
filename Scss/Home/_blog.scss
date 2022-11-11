@@ -16,15 +16,7 @@
             }
 
             .blog-date {
-                position: absolute;
-                top: 50px;
-                left: 0;
-                color:$w-color;
-                background:$main-color;
-                border-radius: 0 25px 25px 0;
-                padding: 5px 15px;
-                font-weight: 700;
-
+            @include blogdate(absolute,50px,0,$w-color,$main-color,0 25px 25px 0,5px 15px,700);
                 a {
                     color: $w-color;
                 }
@@ -35,11 +27,7 @@
             box-sizing: border-box;
 
             h2 {
-                font-size: 24px;
-                line-height: normal;
-                font-family: "Lato", sans-serif;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
+            @include posth2(24px,normal,"Lato" sans-serif,uppercase,0.5px);   
 
                 a {
                     color:$lg-color;
@@ -52,18 +40,18 @@
         }
 
         .post-meta {
-            color: #959595;
-            font-weight: 400;
+            color:$light-color;
+            font-weight: $f-weight;
             font-size: 13px;
 
             span {
                 padding-right: 10px;
 
                 a {
-                    color: #323232;
+                    color:$lg-color;
 
                     &:hover {
-                        color: #81c83c;
+                        color: $main-color;
                     }
                 }
 
@@ -74,7 +62,7 @@
 
                 span {
                     &:hover {
-                        color: #81c83c;
+                        color: $main-color;
                     }
                 }
             }
@@ -82,7 +70,7 @@
 
         .post-body {
             font-family: "Lato", sans-serif;
-            font-weight: 400;
+            font-weight: $f-weight;
             font-size: 15px;
             line-height: 1.6em;
             padding-top: 5px;
@@ -90,8 +78,8 @@
 
         .post-footer {
             a {
-                border: 2px solid #81c83c;
-                color: #81c83c !important;
+                border: 2px solid $main-color;
+                color: $main-color !important;
                 border-radius: 50px;
                 padding: 10px 30px;
                 background: none;
@@ -100,7 +88,7 @@
                 transition: all 0.3s ease 0s;
 
                 &:hover {
-                    background-color: #81c83c;
+                    background-color: $main-color;
                     color: #fff !important;
                 }
             }
@@ -110,7 +98,7 @@
             position: relative;
             padding-top: 56%;
             height: 0;
-            background-color: #000000;
+            background-color:$b-color;
             box-shadow: 0 5px 15px rgba(5, 5, 5, 0.2);
 
             iframe {
@@ -168,7 +156,7 @@
                 height: 50px;
                 width: 100%;
                 background: none;
-                color: #959595;
+                color:$light-color;
                 font-size: 14px;
                 border-radius: 0;
                 &:focus{
@@ -196,13 +184,13 @@
                         border-color: #dee2e6 #dee2e6 #fff;
 
                         &:hover {
-                            color: #81c83c;
+                            color: $main-color;
                         }
                     }
 
                     a {
                         background: #f2f2f2;
-                        color: #323232;
+                        color:$lg-color;
                         font-size: 15px;
                         font-weight: 700;
                         text-transform: capitalize;
@@ -213,7 +201,7 @@
                         padding: 6px 12px;
 
                         &:hover {
-                            color: #81c83c;
+                            color: $main-color;
 
                         }
 
@@ -271,27 +259,27 @@
                             }
 
                             p {
-                                color: #959595;
-                                font-weight: 400;
+                                color:$light-color;
+                                font-weight: $f-weight;
                                 font-size: 13px;
                                 font-family: "Lato", sans-serif;
 
                                 .post-author {
                                     a {
-                                        color: #323232;
+                                        color:$lg-color;
 
                                         &:hover {
-                                            color: #81c83c;
+                                            color: $main-color;
                                         }
                                     }
                                 }
 
                                 .post-date {
                                     a {
-                                        color: #959595;
+                                        color:$light-color;
 
                                         &:hover {
-                                            color: #81c83c;
+                                            color: $main-color;
                                         }
                                     }
                                 }
@@ -313,20 +301,12 @@
                 }
             }
         }
-
         .widget-category {
             margin: 60px 0px;
 
             h3 {
-                font-size: 18px;
-                line-height: normal;
-                margin-bottom: 25px;
-                color: #323232;
-                font-family: "Lato", sans-serif;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
+           @include widh3(18px,normal,25px,$lg-color,"Lato" sans-serif,uppercase,0.5px);  
             }
-
             ul {
                 padding: 0;
 
@@ -344,11 +324,11 @@
 
                     a {
                         font-family: "Lato", sans-serif;
-                        font-weight: 400;
-                        color: #323232;
+                        font-weight: $f-weight;
+                        color:$lg-color;
 
                         &:hover {
-                            color: #81c83c;
+                            color: $main-color;
                         }
                     }
 
@@ -365,7 +345,7 @@
                 font-size: 18px;
                 line-height: normal;
                 margin-bottom: 25px;
-                color: #323232;
+                color:$lg-color;
                 font-family: "Lato", sans-serif;
                 text-transform: uppercase;
                 letter-spacing: 0.5px;
@@ -390,7 +370,7 @@
 
                         &:hover {
                             color: #f2f2f2;
-                            background-color: #81c83c;
+                            background-color: $main-color;
                         }
                     }
                 }
@@ -405,7 +385,7 @@
                 font-size: 18px;
                 line-height: normal;
                 margin-top: 0;
-                color: #323232;
+                color:$lg-color;
                 font-family: "Lato", sans-serif;
                 text-transform: uppercase;
                 letter-spacing: 0.5px;
@@ -413,7 +393,7 @@
 
             p {
                 font-family: "Lato", sans-serif;
-                font-weight: 400;
+                font-weight: $f-weight;
                 font-size: 15px;
                 line-height: 1.6em;
                 color: #6A6A6A;

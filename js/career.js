@@ -2,8 +2,7 @@ let titles = document.querySelectorAll(".title");
 let blocks = document.querySelectorAll(".block");
 let wrapper = document.querySelector(".wrapper");
 
-function classToggle(event) {
-  console.log("ok");
+wrapper.addEventListener("click", (event) => {
   if (!event.target.classList.contains("title")) {
     return;
   }
@@ -15,8 +14,7 @@ function classToggle(event) {
   if (!isContainsClass) {
     currentBlockClassList.add("active-block");
   }
-}
-wrapper.addEventListener("click", classToggle);
+});
 
 ///////////////////////
 
@@ -40,14 +38,4 @@ function classToggle(event) {
   }
 }
 
-//nav scroll
 
-function changeS() {
-  var navbar = document.getElementById("navbar");
-  var scrollValue = window.scrollY;
-  if (scrollValue < 150) {
-    navbar.classList.remove("fixed");
-  } else {
-    navbar.classList.add("fixed");
-  }
-}

@@ -14,6 +14,7 @@
 @import "Home/features";
 @import "Home/portstatic";
 @import "Home/webkit";
+@import "Home/login";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&display=swap');
 
@@ -32,3 +33,4 @@ a{
 html{
     scroll-behavior: smooth;
 }
+

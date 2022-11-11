@@ -1,25 +1,25 @@
 @mixin ctnpre($al-itm,$cur,$heig,$jus-con,$pos,$lef,$top,$width,$z-in) {
-  align-items: center;
-  cursor: none;
+  align-items: $al-itm;
+  cursor: $cur;
   display: flex;
-  height: 100%;
-  justify-content: center;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 900;
+  height: $heig;
+  justify-content: $jus-con;
+  position:$pos;
+  left: $lef;
+  top:$top;
+  width:$width;
+  z-index: $z-in;
 }
 
 @mixin ctnload($anima,$col,$con,$lef,$opa,$pos,$top,$transt) {
-  animation: letters-loading 4s infinite;
-  color: #000000;
-  content: attr(data-text-preloader);
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  transform: rotateY(-90deg);
+  animation: $anima;
+  color:$b-color;
+  content: $con;
+  left: $lef;
+  opacity: $opa;
+  position:$pos;
+  top: $top;
+  transform: $transt;
 }
 
 @mixin ctnpre-spin($anima,$b-rad,$bor,$bor0t,$heig,$mar,$widt) {
@@ -86,7 +86,7 @@
 @mixin dropd($b-col,$width, $pos, $cur, $top, $left, $z-i, $dis,$pad) {
   background: $w-color;
   width: 190px;
-  position: absolute;
+  position:$pos;
   cursor: pointer;
   top: 30px;
   left: -30px;
@@ -138,7 +138,7 @@
 
 @mixin closebtn($box-s,$pos,$top,$rig,$f-size,$mar-l) {
   box-shadow: none !important;     
-  position: absolute;
+  position:$pos;
   top: 9px;
   right: 25px;
   font-size: 36px !important;
@@ -164,7 +164,7 @@
   content: "";
   height: 80px;
   bottom: -34px;
-  position: absolute;
+  position:$po;
   width: 100%;
   z-index: 2;
   transform: skew(0deg, 2.5deg);
@@ -241,7 +241,7 @@
 @mixin iso-over($transt,$opa,$posit,$width,$top,$left,$trans,$text-al) {
   transition: 0.5s ease;
   opacity: 0;
-  position: absolute;
+  position:$posit;
   width: 100%;
   top: 50%;
   left: 50%;
@@ -282,7 +282,7 @@
 };
 
 @mixin overbefore($pos,$top,$rig,$bot,$left,$widt,$heg,$bor,$cont) {
-  position: absolute;
+  position:$pos;
   top: 0px;
   right: 0px;
   bottom: 0px;
@@ -334,7 +334,7 @@
 }
 
 @mixin teamtop($pos,$flot,$b-left,$b-rig,$bor-t,$bor-b) {
-  position: absolute;
+  position:$pos;
   display: block;
   float: left;
   border-left: 120px solid $w-color;
@@ -363,7 +363,7 @@
 }
 
 @mixin overlay($pos,$lef,$top,$bot,$rig,$width,$heg) {
-  position: absolute;
+  position:$pos;
   left: 0;
   top: 0;
   bottom: 0;
@@ -422,7 +422,7 @@
 @mixin currency($top,$left,$pos,$f-size,$li-heg,$f-weig,$ver-alig) {
   top: 1.5em;
   left: 2.7em;
-  position: absolute;
+  position:$pos;
   font-size: 60%;
   line-height: 0;
   font-weight: 600;
@@ -433,7 +433,7 @@
   bottom: -30px;
   border: solid transparent;
   content: " ";
-  position: absolute;
+  position:$pos;
   border-width: 15px;
   border-top-color: #f2f2f2;
   left: 50%;
@@ -560,82 +560,82 @@
 
 @mixin copyli($just-c,$text-a,$gap,$mar-l) {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  gap: 30px;
-  margin-left: 0;
+  justify-content:$just-c;
+  text-align:$text-a;
+  gap: $gap;
+  margin-left:$mar-l;
 }
 
 @mixin copyinfo($f-size,$bor-t,$max-wid,$mar,$pad-t) {
-  font-size: 16px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    max-width: 850px;
-    margin: 30px auto 0;
-    padding-top: 15px;
+  font-size: $f-size;
+  border-top: $bor-t;
+  max-width: $max-wid;
+  margin: $mar;
+  padding-top: $pad-t;
 }
 
 @mixin copybefore($back,$cont,$heig,$top,$pos,$wid,$z-in,$trans) {
-  background: #191919;
-  content: "";
-  height: 75px;
-  top: -37px;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-  transform: skew(0deg, -2deg);
+  background: $back;
+  content: $cont;
+  height: $heig;
+  top: $top;
+  position:$pos;
+  width: $wid;
+  z-index: $z-in;
+  transform: $trans;
 }
 
 @mixin endbutton($dis,$back,$wid,$heig,$bor-r,$pos,$bot,$rig,$transt,$opo,$z-in,$bor,$pad,$bor-wid) {
-  display: inline-block;
-  background: none;
-  width: 50px;
-  height: 40px;
-  border-radius: 50px;
-  position: fixed;
-  bottom: 50px;
-  right: 40px;
-  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
-  opacity: 0;
-  z-index: 1000;
-  border: 1px solid $w-color;
-  padding: 10px 30px;
-  border-width: 2px;
+  display:$dis;
+  background: $back;
+  width: $wid;
+  height:$heig;
+  border-radius: $bor-r;
+  position: $pos;
+  bottom: $bot;
+  right: $rig;
+  transition: $transt;
+  opacity: $opo;
+  z-index: $z-in;
+  border: $bor;
+  padding: $pad;
+  border-width: $bor-wid;
 }
 
 @mixin but-i($f-siz,$col,$pos,$rig,$top) {
-  font-size: 12px;
+  font-size: $f-siz;
   color: $w-color;
-  position: absolute;
-  right: 23px;
-  top: 10px;
+  position:$pos;
+  right: $rig;
+  top: $top;
 }
 
 @mixin modal-con($wid,$pos,$top,$rig) {
-  width: 600px;
-  position: absolute;
-  top: 100px; 
-  right: 0px;
+  width: $wid;
+  position:$pos;
+  top: $top; 
+  right: $rig;
 }
 
 @mixin btn-clos($bor,$f-size,$wid,$heg,$bor-r) {
-  border: 1px solid gray;
-  font-size: 10px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+  border: $bor;
+  font-size: $f-size;
+  width:$wid;
+  height:$heg;
+  border-radius:$bor-r;
 }
 
 @mixin link($back-c,$pad,$jus-con,$bor,$wid,$tex-al,$mar-lef,$bor-rad,$transt) {
- background-color: #1d9bf0;
- padding: 0px 0px 3px 3px;
+ background-color:$back-c;
+ padding: $pad;
  display: flex;
- justify-content: center;
- border: none;
- width: 40px;
- text-align: center;
- margin-left: 4px;
- border-radius: 22px;
- transition: .2s ease-in;
+ justify-content:$jus-con;
+ border: $bor;
+ width: $wid;
+ text-align: $tex-al;
+ margin-left: $mar-lef;
+ border-radius: $bor-rad;
+ transition: $transt;
 }
 
 
@@ -677,31 +677,60 @@
 }
 
 @mixin tabp($f-fam,$f-weg,$f-size,$l-heig,$col) {
- font-family: "Lato", sans-serif;
- font-weight: 400;
- font-size: 15px;
- line-height: 1.6em;
+ font-family:$f-fam;
+ font-weight: $f-weight;
+ font-size:$f-size;
+ line-height: $l-heig;
  color: $g-color;
 }
 
 @mixin numroww($wid,$al-itm,$text-a,$pos,$col) {
   display: flex;
-  width: 100%;
-  align-items: center;
-  text-align: center;
-  position: relative;
+  width: $wid;
+  align-items: $al-itm;
+  text-align: $text-a;
+  position:$pos;
   color: $w-color;
 }
 
 @mixin numbut($back-col,$bor,$bor-r,$pad,$col,$f-fam,$f-siz,$f-weig,$text-t,$transt) {
-  background-color: inherit;
-  border: 2px solid$main-color;
-  border-radius: 30px;
-  padding: 10px 30px;
+  background-color: $back-col;
+  border: $bor;
+  border-radius: $bor-r;
+  padding: $pad;
   color:$main-color;
-  font-family: "Lato" sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: 0.3s ease-in-out;
+  font-family:$f-fam;
+  font-size: $f-siz;
+  font-weight:$f-weig;
+  text-transform: $text-t;
+  transition: $transt;
+}
+
+@mixin blogdate($pos,$top,$left,$col,$back,$bor-r,$pad,$f-weig) {
+  position:$pos;
+  top: $top;
+  left:$left;
+  color:$w-color;
+  background:$main-color;
+  border-radius:$bor-r;
+  padding: $pad;
+  font-weight: $f-weig;
+}
+
+@mixin posth2($f-size,$line-heig,$f-fam,$text-t,$let-sp) {
+  font-size: $f-size;
+  line-height:$line-heig;
+  font-family: $f-fam;
+  text-transform: $text-t;
+  letter-spacing: $let-sp;
+}
+
+@mixin widh3($f-size,$li-heig,$mar-b,$col,$f-fam,$text-t,$let-sp) {
+  font-size: $f-size;
+  line-height: $li-heig;
+  margin-bottom: $mar-b;
+  color:$lg-color;
+  font-family: $f-fam;
+  text-transform: $text-t;
+  letter-spacing: $let-sp;
 }
