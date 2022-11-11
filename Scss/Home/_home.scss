@@ -142,14 +142,8 @@
 
 header {
   position: relative;
-
   nav {
-    position: fixed;
-    width: 100%;
-    height: 120px;
-    top: 0;
-    z-index: +11;
-    padding-top: 10px;
+    @include nav(fixed,100%,100%,0,+11,10px);
 
     .logo {
       width: 100%;
@@ -158,17 +152,10 @@ header {
     }
 
     ul {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      margin-top: 14px;
+    @include ull(space-evenly,center,14px);  
 
       li {
-        position: relative;
-        list-style: none;
-        display: inline-flex;
-        cursor: pointer;
-        padding: 10px 0px 20px 0px;
+    @include lii(relative,none,inline-flex,pointer,10px 0px 20px 0px);   
 
         &:hover {
           .dropdown {
@@ -177,23 +164,11 @@ header {
         }
 
         .dropdown {
-          @include dropd($w-color,190px,absolute,pointer,
-            30px,
-            -30px,
-            999,
-            none
-          );
+          @include dropd($w-color,190px,absolute,pointer,30px,-30px, 999,none,0px 15px);
           li {
-            display: block;
-            width: 100%;
-            padding: 14px;
-            padding-right: 60px;
-            border-bottom: 1px solid lightgrey;
-
+          @include dropli(block,100%,14px,60px,1px solid lightgrey);
             a {
-              @include alink(block,$b-color !important,8px,12px,400,0.3s ease-in-out,capitalize
-              );
-
+              @include dropa(block,$b-color !important,8px,12px,400,0.3s ease-in-out,capitalize);
               &:hover {
                 color: $main-color !important;
               }
@@ -202,39 +177,23 @@ header {
         }
 
         a {
-          display: block;
-          color: $w-color !important;
-          text-transform: uppercase;
-          font-weight: 500;
-          transition: 0.3s ease-in-out;
-
+        @include alink(black,$w-color !important,uppercase,500,0.3s ease-in-out);  
           &:hover {
             color: $main-color !important;
           }
         }
 
         .bi-caret-down-fill {
-          font-size: 10px;
-          padding: 6px 0px 0px 5px;
-          color: $w-color;
-          justify-content: start;
-          align-items: center;
+         @include bi-caret(10px,6px 0px 0px 5px,$w-color,start,center); 
         }
       }
     }
 
-    .burger {
+    .sidepanel{
       display: none;
-      cursor: pointer;
-
-      .bar {
-        display: block;
-        width: 22px;
-        height: 3px;
-        margin: 5px auto;
-        transition: 0.3s ease-in-out;
-        background-color: $w-color;
-      }
+    }
+    .openbtn{
+      display: none;
     }
 
     @media (max-width: 768px) {
@@ -246,38 +205,30 @@ header {
           padding-top: 10px;
         }
       }
-
-      .mobile-nav {
-        position: relative;
+       .nav-menu{
+        display: none;
+       }
+      .sidepanel {
+       @include sidepa(space-around,440px,0,fixed,1,0,0,#111,hidden,84px,0.5s); 
       }
-      .burger {
-        @include burgers(
-          absolute,-46px,25px !important,$main-color,9px 12px,1.25rem,1,block,50% !important);
-
-        .burger.active.bar:nth-child(2) {
-          opacity: 0;
-        }
-
-        .burger.active.bar:nth-child(1) {
-          transform: translateY(8px) rotate(45deg);
-        }
-
-        .burger.active.bar:nth-child(3) {
-          transform: translateY(-8px) rotate(-45deg);
-        }
+      .sidepanel a {
+       @include responsa(4px 4px 4px 8px,none,20px,#a7a6a6,block,0.3s);
+        &:hover{
+          color: $main-color;
+          box-shadow: 4px 4px 4px 2px rgb(90, 188, 90);
+          border-radius: 10px
+        }        
       }
-      ul {
-        @include ull(fixed,100%,-100%,83px,0,column,$b-color,hidden,center,0.3s
-        );
-
-        li {
-          margin: 16px 0;
+       .closebtn {
+       @include closebtn(none !important,absolute,9px,25px,36px !important,50px); 
+      }    
+      .openbtn {
+       @include openbtn(block,20px,pointer,$main-color,$w-color,10px 15px,50%,none,absolute,24px,25px);
+        &:hover {
+          background-color: #444;          
         }
       }
-      .nav-menu.active {
-        left: 0;
-        overflow: hidden;
-      }
+      
     }
   }
   .swiperr {
@@ -597,28 +548,11 @@ header {
   }
 
   .content::before {
-    background: $w-color;
-    content: "";
-    height: 80px;
-    bottom: -34px;
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-    transform: skew(0deg, 2.5deg);
+    @include contbefor($w-color,"",80px,-34px,absolute,100%,2,skew(0deg,2.5deg));
   }
 }
 .fixed {
-  background-color: $b-color !important;
-  color: $w-color !important;
-  padding: 40px 0px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  transition: 0.7s ease-in-out;
-  transform: translateY(-40px);
-
+   @include fixed($b-color !important,$w-color !important,40px 0px,fixed,0,0,0,99,0.7s ease-in-out,translateY(-40px));
   p {
     a {
       color: $w-color !important;
@@ -630,6 +564,12 @@ header {
         color: $w-color !important;
       }
     }
+  }
+  .sidepanel{
+    top: 41px;
+  }
+  .openbtn{
+    top: 55px;
   }
 }
 
@@ -650,11 +590,7 @@ main {
       }
 
       .serviceicon {
-        border-right: 2px solid lightgrey;
-        color: #959595;
-        padding: 8px;
-        margin-bottom: 10px;
-        transition: 0.2s ease-in-out;
+       @include sericon(2px solid lightgrey,#959595,8px,10px,0.2s ease-in-out);
         i{
           font-size: 30px;
         }
@@ -668,12 +604,7 @@ main {
         margin-left: 15px;
 
         h3 {
-          color: #323232;
-          font-weight: 450;
-          letter-spacing: 1px;
-          font-family: "Lato" sans-serif;
-          margin: 0;
-          padding: 0;
+        @include serh3(#323232,450,1px,"Lato" sans-serif,0,0); 
         }
 
         p {
@@ -684,11 +615,7 @@ main {
     }
 
     .service-card {
-      width: 100%;
-      justify-content: center;
-      text-align: center;
-      align-items: center;
-      display: contents;
+      @include sercard(100%,center,center,center,contents);
 
       .iconcard {
         padding-bottom: 20px;
@@ -726,10 +653,7 @@ main {
     }
 
     .isotope_head {
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      transition: 0.2s ease-in-out;
+    @include isohead(start,center,0.2s ease-in-out);  
 
       &:hover {
         .isotope_icon {
@@ -790,12 +714,7 @@ main {
       }
 
       img {
-        opacity: 1;
-        display: block;
-        height: auto;
-        width: 100%;
-        transition: 0.5s ease-in-out;
-        backface-visibility: hidden;
+      @include elimg(1,block,auto,100%,0.5s ease-in-out,hidden);  
       }
 
       .overlay-opacity {
@@ -827,6 +746,7 @@ main {
       }
       .element-item{
         width: 100%;
+        margin-bottom: 10px;
       }
     }
   }
@@ -834,12 +754,11 @@ main {
   .number {
     .num_row {
      @include numrow(100%,$lg-color,center,$w-color,visible);
-
+     
       .number_counter {
         width: 100%;
         padding: 46px 40px 30px;
         transition: 0.2s ease-in-out;
-
         &:hover {
           background-color: #161515;
         }
@@ -858,6 +777,10 @@ main {
           font-size: 18px;
         }
       }
+    }  
+      .col-md-3{
+        padding: 0;
+      
     }
   }
 
@@ -904,9 +827,12 @@ main {
       width: 100%;
 
       img {
-        width: 100%;
+        width: 102%;
         height: 100%;
         object-fit: cover;
+        @media (max-width:768px) {
+            width: 100%;          
+        }
       }
     }
 
@@ -914,6 +840,7 @@ main {
       padding: 90px;
       @media (max-width: 768px) {
         padding: 0;
+        
         .meantxt{
           margin-top: 10px !important;
         }
@@ -951,22 +878,10 @@ main {
       }
 
       .doctortext {
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-        margin-top: 22px;
-        padding: 0px 20px;
+        @include doctext(100%,center,22px,0px 20px);
 
         .doctor_icon {
-          width: 60px;
-          height: 60px;
-          line-height: 56px;
-          margin-right: 20px;
-          color: $w-color;
-          background-color: $main-color;
-          border-radius: 100%;
-          display: inline-block;
-          text-align: center;
+        @include docicon(60px,60px,56px,20px,$w-color,$main-color,100%,inline-block,center); 
         }
 
         .doctor_text {
@@ -992,7 +907,6 @@ main {
 
   .team {
     margin: 100px 0;
-
     .team_head {
       display: flex;
       justify-content: start;
@@ -1068,11 +982,7 @@ main {
         padding-top: 10px;
 
         h3 {
-          font-weight: $f-weight;
-          text-align: center;
-          font-size: 20px;
-          margin-bottom: 0;
-          padding-right: 60px;
+        @include cardh3($f-weight,center,20px,0,60px);  
         }
 
         p {
@@ -1095,7 +1005,6 @@ main {
             color: $g-color;
             cursor: pointer;
             transition: 0.2s ease-in;
-
             &:hover {
               color: blue;
             }
@@ -1212,12 +1121,7 @@ main {
       }
 
       .pricingicon {
-        border-right: 2px solid lightgrey;
-        color: #959595;
-        padding: 8px;
-        margin-bottom: 10px;
-        transition: 0.2s ease-in-out;
-
+      @include pricicon(2px solid lightgrey,#959595,8px,10px,0.2s ease-in-out); 
         &:hover {
           color: $main-color;
         }
@@ -1240,6 +1144,10 @@ main {
     .plan {
       border: 1px solid #dedede;
       margin-bottom: 60px;
+      position: relative;
+      &:hover{
+      @include planhov(all 0.2s ease-out,0px 4px 8px rgba(38, 38, 38, 0.2),-8px,1px solid #cccccc,$w-color);
+      }
 
       .plan-name {
        @include pname(block,24px,30px,700,20px 0,#959595);

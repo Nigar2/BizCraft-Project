@@ -6,82 +6,6 @@ header {
         width: 100%;
         height: 120px;
         top: 0;
-        z-index: +11;
-        padding-top: 10px;   
-
-        .logo {
-            width: 100%;
-            object-fit: cover;
-            text-align: center;
-        }
-
-        ul {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            margin-top: 14px;
-
-            li {
-                position: relative;
-                list-style: none;
-                display: inline-flex;
-                cursor: pointer;
-                padding: 10px 0px 20px 0px;
-
-                &:hover {
-                    .dropdown {
-                        display: block;
-                    }
-                }
-
-                .dropdown {
-                    background: white;
-                    position: absolute;
-                    cursor: pointer;
-                    top: 40px;
-                    left: -30px;
-                    z-index: 999;
-                    display: none;
-                    padding: 0px 15px;
-
-                    li {
-                        display: block;
-                        width: 100%;
-                        padding: 14px;
-                        padding-right: 60px;
-                        border-bottom: 1px solid lightgrey;
-
-                        a {
-                            @include alink(block,$b-color !important,8px,12px,400,0.3s ease-in-out,capitalize);
-
-                            &:hover {
-                                color: #81c83c;
-                            }
-                        }
-                    }
-                }
-
-                a {
-                    display: block;
-                    color: white;
-                    text-transform: uppercase;
-                    font-weight: 500;
-                    transition: 0.3s ease-in-out;
-
-                    &:hover {
-                        color: #81c83c;
-                    }
-                }
-
-                .bi-caret-down-fill {
-                    font-size: 10px;
-                    padding: 6px 0px 0px 5px;
-                    color: white;
-                    justify-content: start;
-                    align-items: center;
-                }
-            }
-        }
         @media (max-width: 768px) {
             .logo {
               display: inline;
@@ -92,59 +16,7 @@ header {
               }
             }
       
-            .mobile-nav {
-              position: relative;
-            }
-            .burger {
-              @include burgers(
-                absolute,-46px,25px !important,$main-color,9px 12px,1.25rem,1,block,50%);
-      
-              .burger.active.bar:nth-child(2) {
-                opacity: 0;
-              }
-      
-              .burger.active.bar:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-              }
-      
-              .burger.active.bar:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-              }
-            }
-            ul {
-              @include ull(fixed,100%,-100%,83px,0,column,$b-color,hidden,center,0.3s
-              );
-      
-              li {
 
-                margin: 16px 0;
-                display: inline-flex;
-                cursor: pointer;
-                padding: 10px 0px 20px 0px;
-
-                &:hover {
-                    .dropdown {
-                        display: block;
-           
-                        li{
-                            display: block;
-                            width: 100%;
-                            z-index: +11;
-                            .nav-link{
-                                display: block;
-                                width: 100%;
-                                z-index: +11;
-                            }
-                        }
-
-                    }
-              }
-            }
-            }
-            .nav-menu.active {
-              left: 0;
-              overflow: hidden;
-            }
           }
     }
 
@@ -180,46 +52,17 @@ header {
                 font-weight: 500;
                 text-align: center;
                 a:first-child{
-                    color: #81c83c;
+                    color:$main-color;
                 }
             }
         }
     }
 
     .parallax-overlay {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
+        @include overlay(absolute,0,0,0,0,100%,100%);
         background: url(https://demo.themefisher.com/bizcraft/images/overaly.png);
     }
 }
-.fixed {
-    background-color:$b-color !important;
-    color:$w-color !important;
-    padding: 40px 0px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    transition: 0.7s ease-in-out;
-    transform: translateY(-40px);
-  
-    p {
-      a {
-        color: $w-color !important;
-      }
-    }
-    ul {
-      li {
-        a {
-          color: $w-color !important;
-        }
-      }
-    }
-  }
 
 main {
     margin-top: 60px;
@@ -231,57 +74,39 @@ main {
             margin-bottom: 40px;
             &:hover {
                 .companyicon {
-                    color: #81c83c;
+                    color:$main-color;
                 }
             }
             .companyicon {
-                border-right: 2px solid lightgrey;
-                color: #959595;          
-                padding: 8px;
-                margin-bottom: 4px;
-                transition: 0.2s ease-in-out;
+            @include compicon(2px solid lightgrey,#959595,8px,4px,0.2s ease-in-out);
                 &:hover {
-                    color: #81c83c;
+                    color:$main-color;
                 }
             }
             .companytext {
                 margin-left: 15px;
                 h2 {
-                    color:  #323232;
-                    font-weight: 450;
-                    letter-spacing: 1px;
-                    font-family: "Lato" sans-serif;
-                    text-transform: uppercase;
+            @include comph2($lg-color,450,1px,"Lato" sans-serif,uppercase)
                 }
             }
         }
     }
     .vertical-tab{
-        .tab {
-          
+        .tab {       
             border-right: 1px solid lightgrey;
             flex-direction: column;
             margin-bottom: 1rem!important;
             button {
-                display: block;
-                background-color: inherit;
-                color: black;
-                padding: 22px 16px;
-                width: 100%;
-                border: none;
-                outline: none;
-                text-align: left;
-                cursor: pointer;
+            @include ver-but(block,inherit,$b-color,22px 16px,100%,none,none,left,pointer);    
                 &:hover{
                     .vertic_icon{
                         svg{
-                            color: #81c83c !important;
+                            color:$main-color !important;
                         }
                     }
                     .vertic_text{
                         p{
-
-                            color: #81c83c !important;
+                            color:$main-color !important;
                         }
 
                     }
@@ -296,15 +121,15 @@ main {
                     svg{
                         width: 25px;
                         height: 25px;
-                        color: #323232;
+                        color:$lg-color;
                     }
                    
                  }
                     .vertic_text{
                         p{
-                            padding: 0;
+                        padding: 0;
                         margin: 0;
-                        color: #323232;
+                        color:$lg-color;
                         font-weight: 500;
                         }
                         
@@ -316,11 +141,11 @@ main {
                     
           .tab button:hover {
             padding-left: 10px;
-            border-right: 4px solid #81c83c ;
+            border-right: 4px solid$main-color ;
           }
                   
           .tab button.active {
-            border-right: 4px solid #81c83c ;
+            border-right: 4px solid$main-color ;
           }
           
           .tabcontent {
@@ -330,23 +155,15 @@ main {
             padding-left: 3rem!important;
             
             svg{
-                width: 120px;
-                height: 120px;
-                color: #81c83c;
+             width: 120px;
+             height: 120px;
+             color:$main-color;
             }
             h3{
-                color: #323232;
-                font-size: 24px;
-                font-weight: 400;
-                padding-top: 30px;
-                font-family: "Lato", sans-serif;
+            @include tabh3($lg-color,24px,400,30px,"Lato" sans-serif)    
             }
             p{
-                font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.6em;
-    color: #6A6A6A;
+            @include tabp("Lato" sans-serif,400,15px,1.6em,$g-color) 
             }
 
           }
@@ -355,12 +172,7 @@ main {
     .slider-parallax{
         position: relative;
             .num_row {
-              display: flex;
-              width: 100%;
-              align-items: center;
-              text-align: center;
-              position: relative;
-              color: $w-color;
+            @include numroww(100%,center,center,relative,$w-color);  
         
               .number_counter {
                 width: 100%;
@@ -384,18 +196,9 @@ main {
             
           }
         button{
-            background-color: inherit;
-            border: 2px solid #81c83c;
-            border-radius: 30px;
-            padding: 10px 30px;
-            color: #81c83c;
-            font-family: "Lato" sans-serif;
-            font-size: 12px;
-            font-weight: 500;
-            text-transform: uppercase;
-            transition: 0.3s ease-in-out;
+            @include numbut(inherit,2px solid $main-color,30px,10px 30px,$main-color,"Lato" sans-serif,12px,500,uppercase,0.3s ease-in-out);  
             &:hover{
-                background-color: #81c83c;
+                background-color:$main-color;
                 color: #fff;
             }
         }

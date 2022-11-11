@@ -32,17 +32,6 @@ btn.on('click', function(e) {
   $('html, body').animate({scrollTop:0}, '300');
 });
 
- //burgerlist//
- const burger = document.querySelector('.burger');
- const navMenu = document.querySelector('.nav-menu');
- const dropdown = document.querySelector(".dropdown");
-
- burger.addEventListener('click', ()=>{
-   burger.classList.toggle("active");
-   navMenu.classList.toggle("active");
-   dropdown.classList.toggle("active");
- })
-
  
 //nav scroll
 

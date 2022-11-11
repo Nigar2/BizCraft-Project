@@ -14,47 +14,70 @@
 </head>
 <body>
     <header>
-        <nav id="navbar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5"> 
-                        <div class="logo">
-                          <a href="index.html">             
+      <nav id="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="logo">
+                        <a href="index.html">
                             <img src="https://demo.themefisher.com/bizcraft/images/logo.png" alt="">
-                          </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <ul>
-                            <li><a href="http://127.0.0.1:5501/index.html">home</a></li>
-                            <li><a href="">company</a>
-                                <ul class="dropdown">
-                                    <li><a href="http://127.0.0.1:5501/about.html">About Us</a></li>
-                                    <li><a href="http://127.0.0.1:5501/services.html">Services</a></li>
-                                    <li><a href="http://127.0.0.1:5501/career.html">Career</a></li>
-                                    <li><a href="http://127.0.0.1:5501/testimonial.html">Testimonials</a></li>
-                                    <li><a href="http://127.0.0.1:5501/faq.html">Faq</a></li>
-                                </ul>
-                                <i class="bi bi-caret-down-fill"></i>
-                            </li>
-                            <li><a href="">portfolio</a>
-                              <ul class="dropdown">
-                                  <li><a href="portfolio.html">Portfolio 1 </a></li>
-                                  <li><a href="portstatic.html">Portfolio 2</a></li>
-                              </ul> <i class="bi bi-caret-down-fill"></i></li>
-                            <li><a href="">pages</a> 
-                              <ul class="dropdown">
-                                <li><a href="http://127.0.0.1:5501/s-single.html">Services Single</a></li>
-                                <li><a href="http://127.0.0.1:5501/errorpage.html">404 Page</a></li>
-                            </ul> <i class="bi bi-caret-down-fill"></i></li>
-                            <li><a href="blog.html">blog</a></li>
-                            <li><a href="">features</a></li>
-                            <li><a href="contact.html">contact</a></li>
-                        </ul>
+                        </a>
                     </div>
                 </div>
+                <div class="col-lg-7">
+                    <ul class="nav-menu">
+                        <li><a class="nav-link" href="index.html">home</a></li>
+                        <li><a class="nav-link" href="#">company</a>
+                            <ul class="dropdown">
+                                <li><a class="nav-link" href="about.html">About Us</a></li>
+                                <li><a class="nav-link" href="services.html">Services</a></li>
+                                <li><a class="nav-link" href="career.html">Career</a></li>
+                                <li><a class="nav-link" href="testimonial.html">Testimonials</a></li>
+                                <li><a class="nav-link" href="faq.html">Faq</a></li>
+                            </ul>
+                            <i class="bi bi-caret-down-fill"></i>
+                        </li>
+                        <li><a href="#">portfolio</a>
+                            <ul class="dropdown">
+                                <li><a href="portfolio.html">Portfolio 1 </a></li>
+                                <li><a href="portstatic.html">Portfolio 2</a></li>
+                            </ul> <i class="bi bi-caret-down-fill"></i></li>
+                        <li><a class="nav-link" href="#">pages</a>
+                            <ul class="dropdown">
+                                <li><a class="nav-link" href="s-single.html">Services Single</a></li>
+                                <li><a class="nav-link" href="errorpage.html">404 Page</a></li>
+                            </ul>
+                            <i class="bi bi-caret-down-fill"></i></li>
+                        <li><a class="nav-link" href="blog.html">blog</a></li>
+                        <li><a class="nav-link" href="features.html">features</a></li>
+                        <li><a class="nav-link" href="contact.html">contact</a></li>
+                    </ul>
+                    <div id="mySidepanel" class="sidepanel">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                       <div>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="testimonial.html">Testimonials</a>
+                        <a href="s-single.html">Service Single</a>
+                        <a href="services.html">Services</a>
+                        <a href="career.html">Career</a>
+                        <a href="faq.html">Faq</a>
+                       </div>
+                        <div>
+                         <a href="features.html">Features</a>
+                        <a href="portfolio.html">Portfolio Single</a>
+                        <a href="portstatic.html">Portfolio Static</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="errorpage.html">404 Page</a>
+                        <a href="contact.html">Contact</a>
+                        </div>
+                      </div>
+                      
+                      <button class="openbtn" onclick="openNav()">&#9776;</button>
+                </div>
             </div>
-        </nav>
+        </div>
+    </nav>
         <div class="banner-area">
             <img src="https://demo.themefisher.com/bizcraft/images/banner/banner1.jpg" alt="">
             <div class="parallax-overlay"></div>

@@ -11,16 +11,5 @@ function changeS(){
   
   window.addEventListener('scroll',changeS);
 
-  //burgerlist//
- const burger = document.querySelectorAll('.burger');
- const navMenu = document.querySelector('.nav-menu');
- const dropdown = document.querySelector(".dropdown");
- const navlink= document.querySelector(".nav-link");
-
- burger.addEventListener('click', (e)=>{
-  e.preventDefault();
-
-  navMenu.classList.toggle("active");
-  dropdown.classList.toggle("active");
-  navlink.classList.toggle("active");
- })
+ 
+ 

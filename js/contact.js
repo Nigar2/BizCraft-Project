@@ -60,20 +60,7 @@ MapMarker.prototype.getPosition = function() {
   return this.latLng;
 };
 
- //burgerlist//
- const burger = document.querySelectorAll('.burger');
- const navMenu = document.querySelector('.nav-menu');
- const dropdown = document.querySelector(".dropdown");
- const navlink= document.querySelector(".nav-link");
 
- burger.addEventListener('click', (e)=>{
-  e.preventDefault();
-   burger.classList.toggle("active");
-   navMenu.classList.toggle("active");
-   dropdown.classList.toggle("active");
-   navlink.classList.toggle("active");
- })
- 
 
 
 

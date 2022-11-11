@@ -48,21 +48,6 @@ function openCity(evt, cityName) {
     counter("count4", 0, 76, 2000);
    });
 
-   
- //burgerlist//
- const burger = document.querySelector('.burger');
- const navMenu = document.querySelector('.nav-menu');
- const dropdown = document.querySelector(".dropdown");
- const navlink= document.querySelector(".nav-link");
-
- burger.addEventListener('click', (e)=>{
-  e.preventDefault();
-   burger.classList.toggle("active");
-   navMenu.classList.toggle("active");
-   dropdown.classList.toggle("active");
-   navlink.classList.toggle("active");
- })
-
  
 //nav scroll
 
