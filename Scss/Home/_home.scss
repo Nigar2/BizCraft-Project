@@ -72,6 +72,12 @@
   animation-delay: 1.2s;
 }
 
+.ctn-preloader
+  .animation-preloader
+  .txt-loading
+  .letters-loading:nth-child(7):before {
+  animation-delay: 1.4s;
+}
 .ctn-preloader .loader-section {
   background-color: #ffffff;
   height: 100%;
@@ -124,13 +130,13 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .ctn-preloader .animation-preloader .spinner {
     height: 8em;
     width: 8em;
   }
   .ctn-preloader .animation-preloader .txt-loading {
-    font: bold 3.5em "Montserrat", sans-serif;
+    font: bold 2.8em "Montserrat", sans-serif;
   }
 }
 @media screen and (max-width: 500px) {
