@@ -1,11 +1,7 @@
 .wrapper{
     margin-top: 40px;
     h4{
-        font-weight: 400;
-        font-size: 22px;
-        letter-spacing: 1.4px;
-        font-family: "Lato", sans-serif;
-        border-bottom: 2px solid  #81c83c ;
+     @include wraph4(400,22px,1.4px,$f-fam,$main-color);  
     }
     p{
         font-size: 14px;
@@ -13,67 +9,34 @@
     }
 
     .block {
-        width: 100%;
-        border-radius: 5px;
-        overflow: hidden;
-        margin-bottom: 5px;
-        background-color: #e7e7e7;
-        height: 41px;
+      @include wrapblock(100%,5px,hidden,5px,$e7col,41px);  
       }
       .title {
-        border-radius: 5px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-        padding-left: 23px;
-        box-sizing: border-box;
-        height: 41px;
-        color: white;
-        background-color: #9c9a9a;
-        line-height: 41px;
-        cursor: pointer;
-        position: relative;
+       @include wraptitle(5px,0px,0px,23px,border-box,41px,$w-color,#9c9a9a,41px,pointer,relative); 
       }
       .block{
         background-color: #fff;
         border: 1px solid lightgrey;
          .title {
-            color:rgb(113, 108, 108);
-            font-weight: 600;
-            font-family: "Lato", sans-serif;
-            text-transform: uppercase;
-            background-color: #e7e7e7;
+        @include blocktitle(rgb(113, 108, 108),600,$f-fam,uppercase,$e7col);    
           }
       }
       .active-block {
         height: min-content;
       }
       .block.active-block .title {
-        color:rgb(113, 108, 108);
-            font-weight: 600;
-            font-family: "Lato", sans-serif;
-            text-transform: uppercase;
-            background-color: #e7e7e7;
-      
+        @include blocktitle(rgb(113, 108, 108),600,$f-fam,uppercase,$e7col);    
       }
       
       .text {
         margin: 8px 20px;
         li{
-          list-style-type: square;
-          font-size: 14px;
-          color: #696666;
-          
-          line-height: 18px;
+          @include wrapli(square,14px,#696666,18px);  
           
         }
       }
       .arrow {
-        border: 8px solid transparent;
-        border-top: 8px solid #696666;
-        transition: all 0.3s;
-        position: absolute;
-        right: 10px;
-        top: 16px;
+        @include arrow(8px solid transparent,8px solid #696666,all 0.3s,absolute,10px,16px);
       }
       .active-block .arrow {
         border: 8px solid transparent;
@@ -87,11 +50,7 @@
 .wrapper2{
   margin-top: 40px;
   h4{
-      font-weight: 400;
-      font-size: 22px;
-      letter-spacing: 1.4px;
-      font-family: "Lato", sans-serif;
-      border-bottom: 2px solid  #81c83c ;
+    @include wraph4(400,22px,1.4px,$f-fam,$main-color);
   }
   p{
       font-size: 14px;
@@ -99,67 +58,34 @@
   }
 
   .block2 {
-      width: 100%;
-      border-radius: 5px;
-      overflow: hidden;
-      margin-bottom: 5px;
-      background-color: #e7e7e7;
-      height: 41px;
+    @include wrapblock(100%,5px,hidden,5px,$e7col,41px);
     }
-    .title2 {
-      border-radius: 5px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-      padding-left: 23px;
-      box-sizing: border-box;
-      height: 41px;
-      color: white;
-      background-color: #9c9a9a;
-      line-height: 41px;
-      cursor: pointer;
-      position: relative;
+    .title2 {      
+      @include wraptitle(5px,0px,0px,23px,border-box,41px,$w-color,#9c9a9a,41px,pointer,relative); 
     }
     .block2{
       background-color: #fff;
       border: 1px solid lightgrey;
        .title2 {
-          color:rgb(113, 108, 108);
-          font-weight: 600;
-          font-family: "Lato", sans-serif;
-          text-transform: uppercase;
-          background-color: #e7e7e7;
+      @include blocktitle(rgb(113, 108, 108),600,$f-fam,uppercase,$e7col);
         }
     }
     .active-block {
       height: min-content;
     }
     .block2.active-block .title2 {
-      color:rgb(113, 108, 108);
-          font-weight: 600;
-          font-family: "Lato", sans-serif;
-          text-transform: uppercase;
-          background-color: #e7e7e7;
-    
+      @include blocktitle(rgb(113, 108, 108),600,$f-fam,uppercase,$e7col);
     }
     
     .text {
       margin: 8px 20px;
       li{
-        list-style-type: square;
-        font-size: 14px;
-        color: #696666;
-        
-        line-height: 18px;
+      @include wrapli(square,14px,#696666,18px);
         
       }
     }
     .arrow {
-      border: 8px solid transparent;
-      border-top: 8px solid #696666;
-      transition: all 0.3s;
-      position: absolute;
-      right: 10px;
-      top: 16px;
+      @include arrow(8px solid transparent,8px solid #696666,all 0.3s,absolute,10px,16px);
     }
     .active-block .arrow {
       border: 8px solid transparent;
@@ -173,17 +99,9 @@
 .btn{
     margin-top: 10px;
     a{
-        border: 2px solid #81c83c;
-        color:#81c83c;
-        border-radius: 50px;
-        padding: 10px 30px;
-        background: none;
-        font-size: 14px;
-        text-transform: uppercase;
-        transition: all 0.3s ease 0s;
-        border-width: 2px;
+    @include btna(2px solid $main-color,$main-color,50px,10px 30px,none,14px,uppercase,all 0.3s ease 0s,2px);    
         &:hover {
-            background-color: #81c83c !important;
+            background-color: $main-color !important;
             color:white !important;
         }
         svg{
@@ -197,11 +115,8 @@
     margin-top: 40px;
     padding: 0px 60px;
         h4{
-            font-weight: 400;
-            font-size: 22px;
-            letter-spacing: 1.4px;
-            font-family: "Lato", sans-serif;
             text-transform: uppercase;
+            @include wraph4(400,22px,1.4px,$f-fam,NaN);
         }
         p{   
                 font-size: 14px;
@@ -215,16 +130,7 @@
 }
 
 .fixed {
-  background-color:$b-color !important;
-  color:$w-color !important;
-  padding: 40px 0px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: +99;
-  transition: 0.7s ease-in-out;
-  transform: translateY(-40px);
+  @include fixed($b-color !important,$w-color !important,40px 0px,fixed,0,0,0,99,0.7s ease-in-out,translateY(-40px));
 
   p {
     a {
