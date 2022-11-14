@@ -1167,7 +1167,7 @@ main {
       }
 
       .plan-price {
-        @include p-price(48px,28px 0,relative,#f2f2f2,0.3s,"Lato",sans-serif,$f-weight,1.6em,$g-color);
+        @include p-price(48px,28px,0,relative,#f2f2f2,0.3s,"Lato" sans-serif,$f-weight,1.6em,$g-color);
         .currency {
          @include currency(1.5em,2.7em,absolute,60%,0,600,baseline)
         }
@@ -1192,7 +1192,7 @@ main {
       }
 
       .plan-price::after {
-       @include planafter(-30px,solid transparent,"",absolute,15px,#f2f2f2,50%,-16px)
+       @include planafter(-30px, solid transparent,"",absolute,15px,#f2f2f2 !important,50%,-16px)
       }
 
       .list-unstyled {
